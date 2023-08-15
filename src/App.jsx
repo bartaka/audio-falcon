@@ -1,4 +1,5 @@
 import './App.css';
+import logo from './assets/logo/logo-notitle.png';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
         <p>
           Audio Falcon
         </p>
+        <img src={logo} width='60px' />
         <p>
           coming soon
         </p>

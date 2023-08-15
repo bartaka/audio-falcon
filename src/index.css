@@ -1,13 +1,16 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Aku & Kamu";
+  src: url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.eot");
+  src: url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.svg#Aku & Kamu")format("svg");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Aku & Kamu';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
