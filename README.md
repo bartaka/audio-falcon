@@ -1,3 +1,5 @@
 # Audio Falcon
 
-Official (static) page of the Audio Falcon project.
+Official page of the Audio Falcon project
+
+Portfolio & sound bank e-shop

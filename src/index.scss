@@ -8,9 +8,17 @@
     url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.svg#Aku & Kamu")format("svg");
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
   font-family: 'Aku & Kamu';
+  font-size: 1.6rem;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
