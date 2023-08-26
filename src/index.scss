@@ -13,6 +13,8 @@ html {
 }
 
 body {
+  background-color: #080808;
+  color: #e1e1e1;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -21,4 +23,8 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.section-heading {
+  text-align: center;
 }
