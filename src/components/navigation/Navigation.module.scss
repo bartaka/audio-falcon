@@ -1,0 +1,25 @@
+.navigation {
+    & ul {
+        list-style-type: none;
+    }
+
+    & ul li {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    & ul li a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    & ul li a:hover {
+        color: grey;
+    }
+}
+
+.logo {
+    width: 16rem;
+    margin-bottom: 3rem;
+}
+

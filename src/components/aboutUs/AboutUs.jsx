@@ -3,8 +3,8 @@ import aboutUsPhoto from '../../assets/aboutUs/about-us.jpg';
 
 const AboutUs = () => {
     return (
-        <section>
-            <div className='section-heading'>
+        <section> 
+            <div className='section-heading' id='about-us'>
                 <h2>about us</h2>
                 <p>silny, chytry, sexy</p>
             </div>
