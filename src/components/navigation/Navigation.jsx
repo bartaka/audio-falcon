@@ -2,26 +2,30 @@ import logo from '../../assets/logo/AF_Logo.svg';
 import styles from './Navigation.module.scss';
 
 const Navigation = () => {
+    const navLinks = [
+        ['work', '#portfolio'],
+        ['services', '#what-we-do'],
+        ['about us', '#about-us'],
+        ['contact', '#contact']
+    ];
+
     return (
         <div className={styles.navigation}>
             <ul>
                 <li>
                     <a href='https://audio-falcon.com/'>
-                        <img src={logo} className={styles.logo} alt='Audio Falcon logo' />
+                        <img
+                            src={logo}
+                            className={styles.logo}
+                            alt='Audio Falcon logo'
+                        />
                     </a>
                 </li>
-                <li>
-                    <a href='#portfolio'>work</a>
-                </li>
-                <li>
-                    <a href='#what-we-do'>services</a>
-                </li>
-                <li>
-                    <a href='#about-us'>about us</a>
-                </li>
-                <li>
-                    <a href='#contact'>contact</a>
-                </li>
+                {navLinks.map(link => (
+                    <li key={link[1]}>
+                        <a href={link[1]}>{link[0]}</a>
+                    </li>
+                ))}
             </ul>
         </div>
     );

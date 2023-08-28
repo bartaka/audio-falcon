@@ -6,7 +6,7 @@ const AboutUs = () => {
         <section> 
             <div className='section-heading' id='about-us'>
                 <h2>about us</h2>
-                <p>silny, chytry, sexy</p>
+                <h3>silny, chytry, sexy</h3>
             </div>
             <div className={styles['about-us-feature']}>
                 <img src={aboutUsPhoto} alt='Audio Falcon duo smiling' />

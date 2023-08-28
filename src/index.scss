@@ -1,12 +1,10 @@
 @font-face {
   font-family: "Aku & Kamu";
   src: url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.eot");
-  src: url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.svg#Aku & Kamu")format("svg");
+  src: url("https://db.onlinewebfonts.com/t/ad1ea0375a0b5d31cb572e4a038ae716.woff2")format("woff2");
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200;600&display=swap');
 
 html {
   font-size: 62.5%;
@@ -27,4 +25,9 @@ body {
 
 .section-heading {
   text-align: center;
+
+  & h3 {
+    font-family: 'Catamaran';
+    font-weight: 100;
+  }
 }
