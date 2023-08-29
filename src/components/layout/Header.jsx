@@ -1,11 +1,13 @@
 import Navigation from "../navigation/Navigation";
-import Carousel from "../carousel/Carousel";
+import Banners
+
+from "../carousel/Banners";
 
 const Header = () => {
     return (
         <header>
             <Navigation />
-            <Carousel />
+            <Banners />
         </header>
     );
 };
