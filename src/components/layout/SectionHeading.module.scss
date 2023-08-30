@@ -1,0 +1,15 @@
+.section-heading {
+    display: block;
+    margin: 4rem auto;
+    width: 20%;
+    text-align: center;
+
+    & h2 {
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    & h3 {
+        font-family: 'Catamaran';
+        font-weight: 100;
+    }
+}

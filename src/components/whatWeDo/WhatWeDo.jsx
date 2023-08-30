@@ -1,9 +1,9 @@
+import SectionHeading from "../layout/SectionHeading";
+
 const WhatWeDo = () => {
     return (
         <section id='what-we-do'>
-            <div className='section-heading'>
-                <h2>"what we do" section</h2>
-            </div>
+            <SectionHeading heading='what we do' />
         </section>
     );
 };

@@ -9,7 +9,7 @@ const Banners = () => {
         <Carousel
             autoPlay
             infiniteLoop
-            interval={6000}
+            interval={7000}
             transitionTime={5000}
             animationHandler='fade'
             showArrows={false}
@@ -17,11 +17,12 @@ const Banners = () => {
             showStatus={false}
             showThumbs={false}
         >
-
-            <img src={banner1} width='100%' alt='Placeholder for future carousel' />
-
-            <img src={banner2} width='100%' alt='Placeholder for future carousel' />
-
+            <div>
+                <img src={banner1} width='100%' alt='Placeholder for future carousel' />
+            </div>
+            <div>
+                <img src={banner2} width='100%' alt='Placeholder for future carousel' />
+            </div>
         </Carousel>
     );
 };

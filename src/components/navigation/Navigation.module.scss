@@ -1,16 +1,22 @@
 .navigation {
+    position: absolute;
+    z-index: 100;
+    top: 6rem;
+    left: 5rem;
+
     & ul {
         list-style-type: none;
     }
 
     & ul li {
         font-size: 3rem;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     & ul li a {
         text-decoration: none;
         color: inherit;
+        transition: color .4s;
     }
 
     & ul li a:hover {
@@ -19,7 +25,7 @@
 }
 
 .logo {
-    width: 16rem;
-    margin-bottom: 3rem;
+    width: 20rem;
+    margin-bottom: 6rem;
 }
 

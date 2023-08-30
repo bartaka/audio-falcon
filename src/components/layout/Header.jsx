@@ -1,7 +1,5 @@
 import Navigation from "../navigation/Navigation";
-import Banners
-
-from "../carousel/Banners";
+import Banners from "../carousel/Banners";
 
 const Header = () => {
     return (

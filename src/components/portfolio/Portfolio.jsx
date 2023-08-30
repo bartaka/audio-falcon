@@ -1,9 +1,9 @@
+import SectionHeading from "../layout/SectionHeading";
+
 const Portfolio = () => {
     return (
-        <section>
-            <div className='section-heading'>
-                <h2>portfolio</h2>
-            </div>
+        <section id='portfolio'>
+            <SectionHeading heading='portfolio' />
         </section>
     );
 };

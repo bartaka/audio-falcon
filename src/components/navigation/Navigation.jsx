@@ -13,7 +13,7 @@ const Navigation = () => {
         <div className={styles.navigation}>
             <ul>
                 <li>
-                    <a href='https://audio-falcon.com/'>
+                    <a href='/'>
                         <img
                             src={logo}
                             className={styles.logo}
