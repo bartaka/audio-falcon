@@ -1,12 +1,14 @@
 import logo from '../../assets/logo/AF_Logo.svg';
 import styles from './Navigation.module.scss';
 
+import { Link } from 'react-scroll';
+
 const Navigation = () => {
     const navLinks = [
-        ['work', '#portfolio'],
-        ['services', '#what-we-do'],
-        ['about us', '#about-us'],
-        ['contact', '#contact']
+        ['work', 'portfolio'],
+        ['services', 'what-we-do'],
+        ['about us', 'about-us'],
+        ['contact', 'contact']
     ];
 
     return (
@@ -23,7 +25,14 @@ const Navigation = () => {
                 </li>
                 {navLinks.map(link => (
                     <li key={link[1]}>
-                        <a href={link[1]}>{link[0]}</a>
+                        <Link
+                            to={link[1]}
+                            smooth
+                            duration={1000}
+                            offset={-120}
+                        >
+                            {link[0]}
+                        </Link>
                     </li>
                 ))}
             </ul>
