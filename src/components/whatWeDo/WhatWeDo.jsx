@@ -1,10 +1,13 @@
-import SectionHeading from "../layout/SectionHeading";
+import Section from "../layout/Section";
 
 const WhatWeDo = () => {
     return (
-        <section id='what-we-do'>
-            <SectionHeading heading='what we do' />
-        </section>
+        <Section
+            sectionId='what-we-do'
+            heading='what we do'
+        >
+        
+        </Section>
     );
 };
 

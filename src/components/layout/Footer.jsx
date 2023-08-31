@@ -1,5 +1,4 @@
 import classes from './Footer.module.scss';
-
 import logo from '../../assets/logo/AF_Logo.svg';
 
 const Footer = () => {

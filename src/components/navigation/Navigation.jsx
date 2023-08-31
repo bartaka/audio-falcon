@@ -1,7 +1,7 @@
-import logo from '../../assets/logo/AF_Logo.svg';
-import styles from './Navigation.module.scss';
-
 import { Link } from 'react-scroll';
+
+import styles from './Navigation.module.scss';
+import logo from '../../assets/logo/AF_Logo.svg';
 
 const Navigation = () => {
     const navLinks = [
