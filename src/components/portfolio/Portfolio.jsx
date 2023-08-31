@@ -1,10 +1,12 @@
-import SectionHeading from "../layout/SectionHeading";
+import Section from "../layout/Section";
 
 const Portfolio = () => {
     return (
-        <section id='portfolio'>
-            <SectionHeading heading='portfolio' />
-        </section>
+        <Section 
+            sectionId='portfolio'
+            heading='portfolio'
+        >
+        </Section>
     );
 };
 
