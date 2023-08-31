@@ -1,31 +1,31 @@
 .navigation {
-    position: absolute;
-    z-index: 100;
-    top: 6rem;
-    left: 5rem;
+  position: absolute;
+  z-index: 100;
+  top: 6rem;
+  left: 5rem;
 
-    & ul {
-        list-style-type: none;
-    }
+  & ul {
+    list-style-type: none;
+  }
 
-    & ul li {
-        font-size: 3rem;
-        margin-bottom: 3rem;
-    }
+  & ul li {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
 
-    & ul li a {
-        text-decoration: none;
-        color: inherit;
-        transition: color .4s;
-    }
+  & ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.4s;
+  }
 
-    & ul li a:hover {
-        color: grey;
-    }
+  & ul li a:hover {
+    color: grey;
+  }
 }
 
 .logo {
-    width: 20rem;
-    margin-bottom: 6rem;
+  opacity: 0.8;
+  width: 20rem;
+  margin-bottom: 6rem;
 }
-
