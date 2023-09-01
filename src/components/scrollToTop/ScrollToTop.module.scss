@@ -12,9 +12,10 @@
     color: $text-color-main;
     background-color: black;
     box-shadow: 0 0 20px $text-color-main;
-    transition: transform .5s;
+    transition: all .5s;
 }
 
 .scroll-to-top-btn:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 10px $text-color-main;
 }
