@@ -6,8 +6,13 @@ const Footer = () => {
 
   return (
     <footer className={classes.footer}>
-      <img src={logo} alt='Audio Falcon logo' width='50px' />
-      <p>&copy; Audio Falcon {currentYear}</p>
+      <div>
+        <img src={logo} alt='Audio Falcon logo' width='50px' />
+        <p>&copy; Audio Falcon {currentYear}</p>
+      </div>
+      <div>
+        <p>additional links</p>
+      </div>
     </footer>
   );
 };

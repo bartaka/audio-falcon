@@ -29,7 +29,7 @@ const Navigation = () => {
                             to={link[1]}
                             smooth
                             duration={1000}
-                            offset={-120}
+                            offset={-100}
                         >
                             {link[0]}
                         </Link>
