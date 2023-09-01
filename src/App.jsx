@@ -4,6 +4,7 @@ import WhatWeDo from './components/whatWeDo/WhatWeDo';
 import AboutUs from './components/aboutUs/AboutUs';
 import ContactUsSection from './components/contactUs/ContactUsSection';
 import Footer from './components/layout/Footer';
+import ScrollToTop from './components/scrollToTop/ScrollToTop';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <AboutUs />
       <ContactUsSection />
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

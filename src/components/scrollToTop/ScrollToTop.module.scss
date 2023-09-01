@@ -1,0 +1,21 @@
+@import '../../scss/variables.scss';
+
+.scroll-to-top-btn {
+    position: fixed;
+    top: 85vh;
+    right: 4rem;
+    z-index: 100;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    color: $text-color-main;
+    background-color: black;
+    box-shadow: 0 0 20px $text-color-main;
+    transition: all .5s;
+}
+
+.scroll-to-top-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px $text-color-main;
+}
