@@ -24,7 +24,7 @@ const ScrollToTop = () => {
 
     return (
         <button
-            className={styles['scroll-to-top-button']}
+            className={styles['scroll-to-top-btn']}
             style={{ display: isVisible ? 'block' : 'none' }}
             onClick={goToTopHandler}
         >
