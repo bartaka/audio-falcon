@@ -13,7 +13,11 @@ const Portfolio = () => {
             <div className={styles['tiles-container']}>
                 {
                     projectsData.map(project => (
-                        <ProjectTile />
+                        <ProjectTile
+                            title={project.projectName}
+                            role={project.role}
+                            type={project.projectType}
+                        />
                     ))
                 }
             </div>

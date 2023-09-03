@@ -1,6 +1,10 @@
 .tiles-container {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
-    height: 100rem;
-    background-color: white;
+    height: 40rem;
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid red;
 }
