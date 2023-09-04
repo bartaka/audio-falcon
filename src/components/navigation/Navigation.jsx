@@ -13,15 +13,15 @@ const Navigation = () => {
 
     return (
         <div className={styles.navigation}>
+            <a href='/'>
+                <img
+                    src={logo}
+                    className={styles.logo}
+                    alt='Audio Falcon logo'
+                />
+            </a>
             <ul>
                 <li>
-                    <a href='/'>
-                        <img
-                            src={logo}
-                            className={styles.logo}
-                            alt='Audio Falcon logo'
-                        />
-                    </a>
                 </li>
                 {navLinks.map(link => (
                     <li key={link[1]}>
