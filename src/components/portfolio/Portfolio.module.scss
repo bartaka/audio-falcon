@@ -1,10 +1,7 @@
 .tiles-container {
-    width: 85%;
+    width: 75%;
     margin: 0 auto;
-    height: 40rem;
-    display: flex;
-    flex-direction: row;
-    // align-items: center;
-    justify-content: space-evenly;
-    border: 1px solid red;
+    display: grid;
+    gap: 0 2rem;
+    grid-template-columns: repeat(3, 1fr);
 }

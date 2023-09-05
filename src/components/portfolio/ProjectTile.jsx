@@ -1,11 +1,11 @@
 import styles from './ProjectTile.module.scss';
 
+import porftoPlaceholder from '../../assets/portfolio/portfo-placeholder.jpg';
+
 const ProjectTile = (props) => {
     return (
         <div className={styles.tile}>
-            <h3>{props.title}</h3>
-            <p>{props.role}</p>
-            <p>{props.type}</p>
+                <img src={porftoPlaceholder} alt="" />
         </div>
     );
 };
