@@ -28,7 +28,7 @@ const ScrollToTop = () => {
             style={{ display: isVisible ? 'block' : 'none' }}
             onClick={goToTopHandler}
         >
-            <FaArrowUp />
+            <FaArrowUp className={styles.arrow} />
         </button>
     );
 };
