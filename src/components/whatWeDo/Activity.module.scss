@@ -1,0 +1,37 @@
+@import '../../scss/variables.scss';
+
+.activity {
+    width: 20%;
+
+    & .icon {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        width: 18rem;
+        height: 18rem;
+        background: radial-gradient($text-color-main,
+                #717171);
+        border-radius: 50%;
+
+        & img {
+            width: 50%;
+        }
+
+    }
+
+    & h3 {
+        color: $text-activity-h3;
+        font-size: 2rem;
+    }
+
+    & h4 {
+        margin-top: -2rem;
+    }
+
+    & h3,
+    h4 {
+        font-weight: 100;
+        text-align: center;
+    }
+}
