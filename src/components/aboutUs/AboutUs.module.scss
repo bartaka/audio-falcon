@@ -1,11 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200;600&display=swap');
 
-.about-us-feature {
+.container {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  font-family: 'Catamaran', sans-serif;
+  align-items: flex-start;
 
   & img {
-    margin: 0 2.5rem;
+    max-width: 55%;
+  }
+
+  & .text {
+    font-family: 'Catamaran', sans-serif;
+    margin-left: 2rem;
+
+    & h3 {
+      font-size: 3rem;
+      margin-block-start: 0;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    & p a {
+      color: inherit;
+    }
+
+    & p .bold {
+      font-weight: 800;
+      font-size: 1.7rem;
+    }
+
   }
 }
