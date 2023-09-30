@@ -6,51 +6,52 @@ export const projectsData = [
         imgSrc: '../../assets/portfolio/portfo-placecholder.jpg'
     },
     {
-        projectName: '',
-        projectType: '',
-        role: '',
-        imgSrc: ''
+        projectName: 'project name',
+        projectType: 'type',
+        role: 'role',
+        imgSrc: '../../assets/portfolio/portfo-placecholder.jpg'
     },
     {
-        projectName: '',
-        projectType: '',
-        role: '',
-        imgSrc: ''
+        projectName: 'project name',
+        projectType: 'type',
+        role: 'role',
+        imgSrc: '../../assets/portfolio/portfo-placecholder.jpg'
     },
     {
-        projectName: '',
-        projectType: '',
-        role: '',
-        imgSrc: ''
+        projectName: 'project name',
+        projectType: 'type',
+        role: 'role',
+        imgSrc: '../../assets/portfolio/portfo-placecholder.jpg'
     },
     {
-        projectName: '',
-        projectType: '',
-        role: '',
-        imgSrc: ''
+        projectName: 'project name',
+        projectType: 'type',
+        role: 'role',
+        imgSrc: '../../assets/portfolio/portfo-placecholder.jpg'
     },
     {
-        projectName: '',
-        projectType: '',
-        role: '',
-        imgSrc: ''
+        projectName: 'project name',
+        projectType: 'type',
+        role: 'role',
+        imgSrc: '../../assets/portfolio/portfo-placecholder.jpg'
     },
     {
-        projectName: '',
-        projectType: '',
-        role: '',
-        imgSrc: ''
+        projectName: 'project name',
+        projectType: 'type',
+        role: 'role',
+        imgSrc: '../../assets/portfolio/portfo-placecholder.jpg'
     },
     {
-        projectName: '',
-        projectType: '',
-        role: '',
-        imgSrc: ''
+        projectName: 'project name',
+        projectType: 'type',
+        role: 'role',
+        imgSrc: '../../assets/portfolio/portfo-placecholder.jpg'
     },
     {
-        projectName: '',
-        projectType: '',
-        role: '',
-        imgSrc: ''
-    }
+        projectName: 'project name',
+        projectType: 'type',
+        role: 'role',
+        imgSrc: '../../assets/portfolio/portfo-placecholder.jpg'
+    },
+
 ];

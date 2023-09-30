@@ -15,20 +15,19 @@
     transition: all .4s;
   }
 
-  & ul li:hover {
-    transform: scale(1.05);
-  }
-
   & ul li a {
     opacity: 0.8;
     text-decoration: none;
     color: inherit;
     transition: all 0.4s;
     cursor: default;
+    display: inline-block;
+    transform-origin: center;
   }
 
   & ul li a:hover {
     opacity: 1;
+    transform: scale(1.05);
   }
 }
 
