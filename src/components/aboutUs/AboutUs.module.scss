@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200;600&display=swap');
+@import '../../scss/variables.scss';
 
 .container {
   width: 80%;
@@ -32,5 +33,26 @@
       font-size: 1.7rem;
     }
 
+  }
+
+  & button {
+    width: 50%;
+    padding: 1rem 0;
+    color: $text-color-main;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    background-color: $text-activity-h3;
+    border: none;
+    border-radius: 5px;
+    transition: background-color .5s;
+    cursor: pointer;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+
+    &:hover {
+      background-color: #b96600;
+    }
   }
 }

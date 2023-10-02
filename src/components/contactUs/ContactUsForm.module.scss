@@ -1,16 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import '../../scss/variables.scss';
+
 .contact-us-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    & input, textarea {
+    & .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         width: 40%;
+    }
+
+    & label .required {
+        font-size: 1.2rem;
+    }
+
+    & input,
+    textarea {
+        width: 100%;
         margin-bottom: 2rem;
+        background-color: $text-color-main;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        font-family: 'Poppins', sans-serif;
+        transition: border .5s;
+    }
+
+    & input:focus,
+    textarea:focus {
+        outline: none !important;
+        border: 2px solid $text-activity-h3;
+    }
+
+    & input {
+        height: 3rem;
     }
 
     & button {
         width: 20%;
-        padding: .4rem 0;
-    }
+        padding: 1rem 0;
+        color: $text-color-main;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        background-color: $text-activity-h3;
+        border: none;
+        border-radius: 5px;
+        transition: background-color .5s;
+        cursor: pointer;
 
+        &::first-letter {
+            text-transform: capitalize;
+        }
+
+        &:hover {
+            background-color: #b96600;
+        }
+    }
 }
