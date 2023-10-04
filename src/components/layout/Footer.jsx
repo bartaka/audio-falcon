@@ -11,7 +11,7 @@ const Footer = () => {
         <p>&copy; Audio Falcon {currentYear}</p>
       </div>
       <div>
-        <p>additional links</p>
+        <p>additional links?</p>
       </div>
     </footer>
   );
