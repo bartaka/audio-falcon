@@ -41,15 +41,15 @@
     }
 
     & button {
-        width: 20%;
+        width: 25rem;
         padding: 1rem 0;
-        color: $text-color-main;
+        color: $text-activity-h3;
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
-        background-color: $text-activity-h3;
-        border: none;
+        background-color: $bg-color-main;
+        border: 2px solid $text-activity-h3;
         border-radius: 5px;
-        transition: background-color .5s;
+        transition: all .5s;
         cursor: pointer;
 
         &::first-letter {
@@ -57,6 +57,7 @@
         }
 
         &:hover {
+            color: $text-color-main;
             background-color: #b96600;
         }
     }

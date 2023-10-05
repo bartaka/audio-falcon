@@ -1,7 +1,7 @@
 import { Link } from 'react-scroll';
 
 import styles from './Navigation.module.scss';
-import logo from '../../assets/logo/AF_Logo.svg';
+import logo from '../../assets/logo/AF_Logo_With name.svg';
 
 const Navigation = () => {
     const navLinks = [
@@ -13,15 +13,15 @@ const Navigation = () => {
 
     return (
         <div className={styles.navigation}>
+            <a href='/'>
+                <img
+                    src={logo}
+                    className={styles.logo}
+                    alt='Audio Falcon logo'
+                />
+            </a>
             <ul>
                 <li>
-                    <a href='/'>
-                        <img
-                            src={logo}
-                            className={styles.logo}
-                            alt='Audio Falcon logo'
-                        />
-                    </a>
                 </li>
                 {navLinks.map(link => (
                     <li key={link[1]}>
@@ -29,7 +29,7 @@ const Navigation = () => {
                             to={link[1]}
                             smooth
                             duration={1000}
-                            offset={-120}
+                            offset={-10}
                         >
                             {link[0]}
                         </Link>
