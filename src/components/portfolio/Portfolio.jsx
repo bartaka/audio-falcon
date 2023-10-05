@@ -15,6 +15,7 @@ const Portfolio = () => {
                     projectsData.map(project => (
                         <ProjectTile
                             imgSrc={project.imgSrc}
+                            key={project.projectName}
                             title={project.projectName}
                             role={project.role}
                             type={project.projectType}

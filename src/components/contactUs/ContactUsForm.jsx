@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 import styles from './ContactUsForm.module.scss';
@@ -7,18 +7,22 @@ const ContactUsForm = () => {
 
     const form = useRef();
 
+    const [btnText, setBtnText] = useState('send');
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
         emailjs.sendForm(
-            'service_rvox0rm', // SERVICE_ID
-            'template_rp3cf7p', // TEMPLATE_ID
+            process.env.REACT_APP_SERVICE_ID,
+            process.env.REACT_APP_TEMPLATE_ID,
             form.current,
-            'EZJ0zC0tqwU-dKKDv' // PUBLIC KEY
+            process.env.REACT_APP_PUBLIC_KEY
         ).then((result) => {
             e.target.reset();
+            setBtnText('message sent, thank you!');
             console.log(result.text);
         }, (error) => {
+            setBtnText('❗️ server error, please try again');
             console.log(error.text);
         });
     };
@@ -53,7 +57,6 @@ const ContactUsForm = () => {
                     type='text'
                     name='subject'
                     id='subject'
-                    required
                 />
             </div>
             <div className={styles['input-container']}>
@@ -64,10 +67,11 @@ const ContactUsForm = () => {
                     id='message'
                     name='message'
                     rows={7}
+                    maxLength={10000}
                     required
                 ></textarea>
             </div>
-            <button type='submit'>send</button>
+            <button type='submit'>{btnText}</button>
         </form>
     );
 };
