@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
+import ButtonPrimary from '../buttons/ButtonPrimary';
 import styles from './ContactUsForm.module.scss';
 
 const ContactUsForm = () => {
@@ -71,7 +72,7 @@ const ContactUsForm = () => {
                     required
                 ></textarea>
             </div>
-            <button type='submit'>{btnText}</button>
+            <ButtonPrimary btnType='submit' text={btnText} />
         </form>
     );
 };

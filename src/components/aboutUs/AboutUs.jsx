@@ -1,4 +1,5 @@
 import Section from '../layout/Section';
+import ButtonPrimary from '../buttons/ButtonPrimary';
 
 import styles from './AboutUs.module.scss';
 
@@ -24,7 +25,7 @@ const AboutUs = () => {
                     <p>
                         With a client-centric approach, we value effective communication and close collaboration to bring your vision to life. Our portfolio showcases our previous works and the diverse narratives we have been a part of. Whether you are a filmmaker, a game developer, or a documentary producer, we are eager to join you on your next creative endeavor. Let's create something remarkable together!
                     </p>
-                    <button type='submit'>download our CV</button>
+                    <ButtonPrimary btnType='button' text='download our CV' />
                 </div>
             </div>
         </Section >
