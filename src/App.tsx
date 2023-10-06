@@ -6,7 +6,7 @@ import ContactUsSection from './components/contactUs/ContactUsSection';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/buttons/ScrollToTop';
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
       <Header />
@@ -18,6 +18,6 @@ function App() {
       <ScrollToTop />
     </>
   );
-}
+};
 
 export default App;
