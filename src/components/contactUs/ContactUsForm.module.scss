@@ -62,3 +62,13 @@
         }
     }
 }
+
+// Mobile
+@media (max-width: 767px) {
+    .contact-us-form {
+
+        & .input-container {
+            width: 80%;
+        }
+    }
+}

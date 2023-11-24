@@ -1,8 +1,15 @@
 .container {
     width: 80%;
-    margin: 10rem auto 0 auto;
+    margin: 10rem auto -5rem auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+// Mobile
+@media (max-width: 767px) {
+    .container {
+        margin: 5rem auto 0 auto;
+    }
 }

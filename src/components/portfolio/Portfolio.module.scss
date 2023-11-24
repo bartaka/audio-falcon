@@ -5,3 +5,23 @@
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
 }
+
+// Mobile
+@media (max-width: 768px) {
+    .tiles-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .tiles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Big screens
+@media (min-width: 1920px) {
+    .tiles-container {
+        width: 65%;
+    }
+}
