@@ -5,12 +5,15 @@ const Activity = (props) => {
         <div className={styles.activity}>
             <div className={styles.icon}>
                 <img
-                    src={props.imgSource}
+                    src={props.imgSrc}
                     alt={props.imgAlt}
                 />
             </div>
-            <h3>{props.h3}</h3>
-            <h4>{props.h4}</h4>
+            <div className="copy">
+                <h3>{props.h3}</h3>
+                <h4>{props.h4}</h4>
+                <p>{props.p}</p>
+            </div>
         </div>
     );
 };

@@ -1,19 +1,37 @@
 .section {
     margin: 15rem 0;
+
+    & .section-heading {
+        display: block;
+        margin: 4rem auto;
+        width: 20%;
+        text-align: center;
+
+        & h2 {
+            border-bottom: 1px solid #e1e1e1;
+        }
+
+        & h3 {
+            font-family: 'Catamaran';
+            font-weight: 100;
+        }
+    }
 }
 
-.section-heading {
-    display: block;
-    margin: 4rem auto;
-    width: 20%;
-    text-align: center;
-
-    & h2 {
-        border-bottom: 1px solid #e1e1e1;
+// Mobile
+@media (max-width: 767px) {
+    .section {
+        .section-heading {
+            width: 50%;
+        }
     }
+}
 
-    & h3 {
-        font-family: 'Catamaran';
-        font-weight: 100;
+// Big screen
+@media (min-width: 1920px) {
+    .section {
+        .section-heading {
+            width: 13%;
+        }
     }
 }
