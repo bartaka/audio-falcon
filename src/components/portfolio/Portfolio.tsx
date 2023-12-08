@@ -4,7 +4,7 @@ import ProjectTile from "./ProjectTile";
 import { projectsData } from "../../data/portfolioProjects";
 import styles from './Portfolio.module.scss';
 
-const Portfolio = () => {
+const Portfolio = (): React.ReactElement => {
     return (
         <Section
             sectionId='portfolio'
