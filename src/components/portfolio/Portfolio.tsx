@@ -15,6 +15,7 @@ const Portfolio = (): React.ReactElement => {
                     projectsData.map(project => (
                         <ProjectTile
                             imgSrc={project.imgSrc}
+                            imgAlt={project.imgAlt}
                             key={project.id}
                             title={project.projectName}
                             role={project.role}

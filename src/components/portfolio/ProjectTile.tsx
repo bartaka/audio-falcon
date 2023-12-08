@@ -3,9 +3,15 @@ import { useState } from 'react';
 import styles from './ProjectTile.module.scss';
 import ProjectOverlay from './ProjectOverlay';
 
-import porftoPlaceholder from '../../assets/portfolio/portfo-placeholder.jpg';
+type Props = {
+    imgSrc: string;
+    imgAlt: string;
+    type: string;
+    role: string;
+    title: string;
+}
 
-const ProjectTile = (props) => {
+const ProjectTile = (props: Props): React.ReactElement => {
 
     const [tileOverlayed, setTileOverlayed] = useState(false);
     const [overlayDisplayed, setOverlayDisplayed] = useState(false);
@@ -24,7 +30,7 @@ const ProjectTile = (props) => {
                 onMouseOut={handleMouseOut}
                 onClick={handleTileClicked}
             >
-                <img src={porftoPlaceholder} alt="" />
+                <img src={props.imgSrc} alt={props.imgAlt} />
 
                 {tileOverlayed && (
                     <div className={styles.overlay}>

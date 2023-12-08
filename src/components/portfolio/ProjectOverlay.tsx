@@ -1,12 +1,24 @@
-import { useEffect, useState } from 'react';
+import { MouseEventHandler, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import styles from './ProjectOverlay.module.scss';
 
-const Backdrop = (props) => {
+type PropsBackdrop = {
+    onClose: MouseEventHandler<HTMLDivElement>;
+};
+
+type PropsModalWindow = {
+    onClose: MouseEventHandler<HTMLButtonElement>;
+};
+
+type PropsProjectOverlay = {
+    onClose: MouseEventHandler<HTMLElement>;
+};
+
+const Backdrop = (props: PropsBackdrop) => {
     const [visible, setVisible] = useState(false);
 
-    const toggleBodyScroll = (disable) => {
+    const toggleBodyScroll = (disable: boolean) => {
         document.body.style.overflow = disable ? 'hidden' : 'auto';
     };
 
@@ -28,8 +40,8 @@ const Backdrop = (props) => {
     );
 };
 
-const ModalWindow = (props) => {
-    const [visible, setVisible] = useState();
+const ModalWindow = (props: PropsModalWindow) => {
+    const [visible, setVisible] = useState<boolean>(false);
 
     useEffect(() => {
         setVisible(true);
@@ -48,16 +60,23 @@ const ModalWindow = (props) => {
     );
 };
 
-const ProjectOverlay = (props) => {
+const ProjectOverlay = (props: PropsProjectOverlay) => {
+    const backdropRoot = document.getElementById('backdrop-root');
+    const modalRoot = document.getElementById('modal-root');
+
+    if (!backdropRoot || !modalRoot) {
+        throw new Error('Required root elements not found');
+    }
+
     return (
         <>
             {ReactDOM.createPortal(
                 <Backdrop onClose={props.onClose} />,
-                document.getElementById('backdrop-root')
+                backdropRoot
             )}
             {ReactDOM.createPortal(
                 <ModalWindow onClose={props.onClose} />,
-                document.getElementById('modal-root')
+                modalRoot
             )}
         </>
     );
