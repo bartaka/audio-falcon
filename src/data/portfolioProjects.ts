@@ -14,6 +14,11 @@ interface ProjectData {
     role: string;
     imgSrc: string;
     imgAlt: string;
+    year: string;
+    client: string;
+    web: string;
+    description: string;
+    video: string;
 };
 
 export const projectsData: ProjectData[] = [
@@ -23,7 +28,12 @@ export const projectsData: ProjectData[] = [
         projectType: 'game',
         role: 'role',
         imgSrc: img1,
-        imgAlt: 'Degenheim'
+        imgAlt: 'Degenheim',
+        year: '2023',
+        client: 'highrise studios',
+        web: 'https://degenheim.com/',
+        description: 'lorem ipsum dolor sit amet, adipisicing elit, hipsum, choco afogatto turntable lol',
+        video: 'https://www.youtube.com/watch?v=t-7ZVClQDjw'
     },
     {
         id: 2,
@@ -31,7 +41,12 @@ export const projectsData: ProjectData[] = [
         projectType: 'game',
         role: 'role',
         imgSrc: img2,
-        imgAlt: 'Vivat Slovakia'
+        imgAlt: 'Vivat Slovakia',
+        year: '2023',
+        client: 'highrise studios',
+        web: 'https://degenheim.com/',
+        description: 'lorem ipsum dolor sit amet, adipisicing elit, hipsum, choco afogatto turntable lol',
+        video: 'https://www.youtube.com/watch?v=t-7ZVClQDjw'
     },
     {
         id: 3,
@@ -39,7 +54,12 @@ export const projectsData: ProjectData[] = [
         projectType: 'film',
         role: 'role',
         imgSrc: img3,
-        imgAlt: 'OMS'
+        imgAlt: 'OMS',
+        year: '2023',
+        client: 'highrise studios',
+        web: 'https://degenheim.com/',
+        description: 'lorem ipsum dolor sit amet, adipisicing elit, hipsum, choco afogatto turntable lol',
+        video: 'https://www.youtube.com/watch?v=t-7ZVClQDjw'
     },
     {
         id: 4,
@@ -47,7 +67,12 @@ export const projectsData: ProjectData[] = [
         projectType: 'tv series',
         role: 'role',
         imgSrc: img4,
-        imgAlt: 'Volha'
+        imgAlt: 'Volha',
+        year: '2023',
+        client: 'highrise studios',
+        web: 'https://degenheim.com/',
+        description: 'lorem ipsum dolor sit amet, adipisicing elit, hipsum, choco afogatto turntable lol',
+        video: 'https://www.youtube.com/watch?v=t-7ZVClQDjw'
     },
     {
         id: 5,
@@ -55,7 +80,12 @@ export const projectsData: ProjectData[] = [
         projectType: 'type',
         role: 'role',
         imgSrc: img5,
-        imgAlt: 'Dubbing'
+        imgAlt: 'Dubbing',
+        year: '2023',
+        client: 'highrise studios',
+        web: 'https://degenheim.com/',
+        description: 'lorem ipsum dolor sit amet, adipisicing elit, hipsum, choco afogatto turntable lol',
+        video: 'https://www.youtube.com/watch?v=t-7ZVClQDjw'
     },
     {
         id: 6,
@@ -63,7 +93,12 @@ export const projectsData: ProjectData[] = [
         projectType: 'type',
         role: 'role',
         imgSrc: img6,
-        imgAlt: 'Mlcet'
+        imgAlt: 'Mlcet',
+        year: '2023',
+        client: 'highrise studios',
+        web: 'https://degenheim.com/',
+        description: 'lorem ipsum dolor sit amet, adipisicing elit, hipsum, choco afogatto turntable lol',
+        video: 'https://www.youtube.com/watch?v=t-7ZVClQDjw'
     },
     {
         id: 7,
@@ -71,7 +106,12 @@ export const projectsData: ProjectData[] = [
         projectType: 'type',
         role: 'role',
         imgSrc: img7,
-        imgAlt: 'CVUT'
+        imgAlt: 'CVUT',
+        year: '2023',
+        client: 'highrise studios',
+        web: 'https://degenheim.com/',
+        description: 'lorem ipsum dolor sit amet, adipisicing elit, hipsum, choco afogatto turntable lol',
+        video: 'https://www.youtube.com/watch?v=t-7ZVClQDjw'
     },
     {
         id: 8,
@@ -79,6 +119,11 @@ export const projectsData: ProjectData[] = [
         projectType: 'type',
         role: 'role',
         imgSrc: img8,
-        imgAlt: 'Repulse'
+        imgAlt: 'Repulse',
+        year: '2023',
+        client: 'highrise studios',
+        web: 'https://degenheim.com/',
+        description: 'lorem ipsum dolor sit amet, adipisicing elit, hipsum, choco afogatto turntable lol',
+        video: 'https://www.youtube.com/watch?v=t-7ZVClQDjw'
     }
 ];
