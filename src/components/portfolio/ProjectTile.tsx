@@ -33,10 +33,12 @@ const ProjectTile = (props: Props): React.ReactElement => {
                 <img src={props.imgSrc} alt={props.imgAlt} />
 
                 {tileOverlayed && (
-                    <div className={styles.overlay}>
-                        <h4>{props.type}</h4>
-                        <p>{props.role}</p>
-                        <h3>{props.title}</h3>
+                    <div className={styles['overlay-wrapper']}>
+                        <div className={styles.overlay}>
+                            <h4>{props.type}</h4>
+                            <p>{props.role}</p>
+                            <h3>{props.title}</h3>
+                        </div>
                     </div>
                 )}
             </div>
