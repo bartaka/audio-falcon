@@ -9,7 +9,12 @@ type Props = {
     type: string;
     role: string;
     title: string;
-}
+    year: string;
+    client: string;
+    web: string;
+    description: string;
+    video: string;
+};
 
 const ProjectTile = (props: Props): React.ReactElement => {
 
@@ -23,7 +28,18 @@ const ProjectTile = (props: Props): React.ReactElement => {
 
     return (
         <>
-            {overlayDisplayed && <ProjectOverlay onClose={handleClose} />}
+            {
+                overlayDisplayed &&
+                <ProjectOverlay
+                    title={props.title}
+                    year={props.year}
+                    client={props.client}
+                    web={props.web}
+                    description={props.description}
+                    video={props.video}
+                    onClose={handleClose}
+                />
+            }
             <div
                 className={styles.tile}
                 onMouseOver={handleMouseOver}

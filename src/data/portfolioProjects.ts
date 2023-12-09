@@ -50,11 +50,11 @@ export const projectsData: ProjectData[] = [
     },
     {
         id: 3,
-        projectName: 'OMS',
+        projectName: 'ONEMANSHOW: The Movie',
         projectType: 'film',
         role: 'role',
         imgSrc: img3,
-        imgAlt: 'OMS',
+        imgAlt: 'ONEMANSHOW: The Movie',
         year: '2023',
         client: 'highrise studios',
         web: 'https://degenheim.com/',

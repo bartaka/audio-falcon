@@ -8,10 +8,22 @@ type PropsBackdrop = {
 };
 
 type PropsModalWindow = {
+    title: string;
+    year: string;
+    client: string;
+    web: string;
+    description: string;
+    video: string;
     onClose: MouseEventHandler<HTMLButtonElement>;
 };
 
 type PropsProjectOverlay = {
+    title: string;
+    year: string;
+    client: string;
+    web: string;
+    description: string;
+    video: string;
     onClose: MouseEventHandler<HTMLElement>;
 };
 
@@ -51,11 +63,22 @@ const ModalWindow = (props: PropsModalWindow) => {
 
     return (
         <div className={`${styles.modal} ${styles['fade-in']} ${visible ? styles.visible : ''}`}>
-            <h2>project name</h2>
-            <p>description - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae deserunt pariatur cumque obcaecati, ratione, error voluptas culpa facere cum, quae ad quibusdam animi? Quibusdam quaerat libero nisi hic aliquid accusantium fugit natus, deleniti doloremque neque omnis aperiam alias in adipisci.</p>
-            <p>image?</p>
-            <p>external link to project?</p>
-            <button onClick={props.onClose}>close</button>
+            <h2>{props.title}</h2>
+            <div className={styles['modal-content']}>
+                <div className={styles['modal-vid']}>
+                    <iframe
+                        id="inlineFrameExample"
+                        title="Inline Frame Example"
+                        src={props.video}>
+                    </iframe>
+                </div>
+                <div className={styles['modal-data']}>
+                    <p>YEAR: {props.year}</p>
+                    <p>CLIENT: {props.client}</p>
+                    <p>WEB: <a href={props.web} target='_blank'>{props.web}</a></p>
+                    <p>DESCRIPTION: {props.description}</p>
+                </div>
+            </div>
         </div>
     );
 };
@@ -75,7 +98,15 @@ const ProjectOverlay = (props: PropsProjectOverlay) => {
                 backdropRoot
             )}
             {ReactDOM.createPortal(
-                <ModalWindow onClose={props.onClose} />,
+                <ModalWindow
+                    title={props.title}
+                    year={props.year}
+                    client={props.client}
+                    web={props.web}
+                    description={props.description}
+                    video={props.video}
+                    onClose={props.onClose}
+                />,
                 modalRoot
             )}
         </>
