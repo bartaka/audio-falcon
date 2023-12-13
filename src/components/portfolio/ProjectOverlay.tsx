@@ -69,13 +69,13 @@ const ModalWindow = (props: PropsModalWindow) => {
                     <iframe
                         id="inlineFrameExample"
                         title="Inline Frame Example"
-                        src={props.video}>
-                    </iframe>
+                        src={`https://www.youtube.com/embed/${new URL(props.video).searchParams.get('v')}`}
+                    ></iframe>
                 </div>
                 <div className={styles['modal-data']}>
                     <p>YEAR: {props.year}</p>
                     <p>CLIENT: {props.client}</p>
-                    <p>WEB: <a href={props.web} target='_blank'>{props.web}</a></p>
+                    <p>WEB: <a href={props.web} target='_blank' rel='noreferrer'>{props.web}</a></p>
                     <p>DESCRIPTION: {props.description}</p>
                 </div>
             </div>
