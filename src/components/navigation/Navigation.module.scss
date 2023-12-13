@@ -36,3 +36,21 @@
   width: 24rem;
   margin-bottom: 6rem;
 }
+
+// mobile
+@media (max-width: 768px) {
+  .navigation {
+    top: 1rem;
+    left: 1rem;
+
+    & ul li {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      width: 18rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
