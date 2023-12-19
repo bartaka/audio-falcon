@@ -8,7 +8,7 @@ import banner2mobile from '../../assets/carousel/AF-banner02-Skalnate-Pleso-mob.
 import banner3 from '../../assets/carousel/AF-banner03-Tree-Ears-Tatry.jpg';
 import banner3mobile from '../../assets/carousel/AF-banner03-Tree-Ears-Tatry-mob.jpg';
 
-const Banners = () => {
+const Banners = (): React.ReactElement => {
   return (
     <Carousel
       autoPlay
