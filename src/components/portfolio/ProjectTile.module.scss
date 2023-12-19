@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200;600&display=swap');
 
-.tile {
+.overlay-wrapper {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    backdrop-filter: blur(0px) brightness(100%);
+    transition: backdrop-filter .5s ease-in-out;
 
+    &:hover {
+        backdrop-filter: blur(3px) brightness(50%);
+    }
+}
+
+.tile {
     position: relative;
+    transition: backdrop-filter .5s;
 
     & img {
         width: 100%;
@@ -10,30 +24,34 @@
     }
 
     & .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: relative;
         width: 100%;
         height: 100%;
         text-align: center;
-        backdrop-filter: blur(3px);
         cursor: pointer;
 
         & h4,
         p {
             font-family: 'Catamaran', sans-serif;
+            text-transform: capitalize;
         }
 
-        & h4 {
-            font-size: 2rem;
-        }
-
-        & p {
-            margin-top: -3rem;
-        }
-
+        & h4,
+        & p,
         & h3 {
-            margin-top: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        &:hover {
+
+            & h4,
+            & p,
+            & h3 {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     }
 }

@@ -6,7 +6,7 @@ import ContactUsSection from './components/contactUs/ContactUsSection';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/buttons/ScrollToTop';
 
-const App: React.FC = () => {
+const App = (): React.ReactElement => {
   return (
     <>
       <Header />

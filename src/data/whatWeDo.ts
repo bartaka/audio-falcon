@@ -3,7 +3,16 @@ import svg2 from '../assets/whatWeDo/field-recording.svg';
 import svg3 from '../assets/whatWeDo/location-sound.svg';
 import svg4 from '../assets/whatWeDo/post-production.svg';
 
-export const whatWeDoData = [
+interface WhatWeDoData {
+    id: number;
+    imgSrc: string;
+    imgAlt: string;
+    h3: string;
+    h4: string;
+    p: string;
+};
+
+export const whatWeDoData: WhatWeDoData[] = [
     {
         id: 1,
         imgSrc: svg1,
