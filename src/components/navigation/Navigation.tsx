@@ -3,8 +3,8 @@ import { Link } from 'react-scroll';
 import styles from './Navigation.module.scss';
 import logo from '../../assets/logo/AF_Logo_With name.svg';
 
-const Navigation = () => {
-    const navLinks = [
+const Navigation = (): React.ReactElement => {
+    const navLinks: string[][] = [
         ['work', 'portfolio'],
         ['services', 'what-we-do'],
         ['about us', 'about-us'],

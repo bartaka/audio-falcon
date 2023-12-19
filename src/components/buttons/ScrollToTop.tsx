@@ -3,11 +3,10 @@ import { FaArrowUp } from 'react-icons/fa';
 
 import styles from './ScrollToTop.module.scss';
 
-const ScrollToTop = () => {
+const ScrollToTop = (): React.ReactElement => {
+    const [isVisible, setIsVisible] = useState<boolean>(false);
 
-    const [isVisible, setIsVisible] = useState(false);
-
-    const goToTopHandler = () => {
+    const goToTopHandler = (): void => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'

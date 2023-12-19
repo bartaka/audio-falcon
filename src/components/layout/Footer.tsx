@@ -1,8 +1,8 @@
 import classes from './Footer.module.scss';
 import logo from '../../assets/logo/AF_Logo.svg';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+const Footer = (): React.ReactElement => {
+  const currentYear: number = new Date().getFullYear();
 
   return (
     <footer className={classes.footer}>

@@ -1,10 +1,10 @@
 import Section from "../layout/Section";
 import Activity from "./Activity";
 
-import { whatWeDoData } from "../../data/whatWeDo";
+import { whatWeDoData as data } from "../../data/whatWeDo";
 import styles from './WhatWeDo.module.scss';
 
-const WhatWeDo = () => {
+const WhatWeDo = (): React.ReactElement => {
     return (
         <Section
             sectionId='what-we-do'
@@ -12,7 +12,7 @@ const WhatWeDo = () => {
         >
             <div className={styles.container}>
                 {
-                    whatWeDoData.map(activity => (
+                    data.map(activity => (
                         <Activity
                             key={activity.id}
                             imgSrc={activity.imgSrc}

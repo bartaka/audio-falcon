@@ -1,11 +1,9 @@
-import Section from '../layout/Section';
-import ButtonPrimary from '../buttons/ButtonPrimary';
-
 import styles from './AboutUs.module.scss';
-
+import ButtonPrimary from '../buttons/ButtonPrimary';
+import Section from '../layout/Section';
 import image from '../../assets/aboutUs/about-us.jpg';
 
-const AboutUs = () => {
+const AboutUs = (): React.ReactElement => {
     return (
         <Section
             sectionId='about-us'
@@ -28,7 +26,7 @@ const AboutUs = () => {
                     <ButtonPrimary btnType='button' text='download our CV' />
                 </div>
             </div>
-        </Section >
+        </Section>
     );
 };
 

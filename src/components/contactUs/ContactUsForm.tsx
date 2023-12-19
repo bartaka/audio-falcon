@@ -1,25 +1,38 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-import ButtonPrimary from '../buttons/ButtonPrimary';
 import styles from './ContactUsForm.module.scss';
+import ButtonPrimary from '../buttons/ButtonPrimary';
 
-const ContactUsForm = () => {
-
-    const form = useRef();
+const ContactUsForm = (): React.ReactElement => {
+    const form = useRef<HTMLFormElement>(null);
 
     const [btnText, setBtnText] = useState('send');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
+        const serviceId = process.env.REACT_APP_SERVICE_ID;
+        const templateId = process.env.REACT_APP_TEMPLATE_ID;
+        const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+
+        if (!serviceId || !templateId || !publicKey) {
+            throw new Error('Environment variables REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, or REACT_APP_PUBLIC_KEY are not defined');
+        }
+
+        if (!form.current) {
+            throw new Error('The form does not exist');
+        }
+
         emailjs.sendForm(
-            process.env.REACT_APP_SERVICE_ID,
-            process.env.REACT_APP_TEMPLATE_ID,
+            serviceId,
+            templateId,
             form.current,
-            process.env.REACT_APP_PUBLIC_KEY
+            publicKey
         ).then((result) => {
-            e.target.reset();
+            if (form.current) {
+                form.current.reset();
+            }
             setBtnText('message sent, thank you!');
             console.log(result.text);
         }, (error) => {
@@ -78,4 +91,3 @@ const ContactUsForm = () => {
 };
 
 export default ContactUsForm;
-
