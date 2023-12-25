@@ -17,6 +17,18 @@ type Props = {
 };
 
 const ProjectTile = (props: Props): React.ReactElement => {
+    const {
+        imgSrc,
+        imgAlt,
+        type,
+        role,
+        title,
+        year,
+        client,
+        web,
+        description,
+        video
+    } = props;
 
     const [tileOverlayed, setTileOverlayed] = useState(false);
     const [overlayDisplayed, setOverlayDisplayed] = useState(false);
@@ -28,32 +40,30 @@ const ProjectTile = (props: Props): React.ReactElement => {
 
     return (
         <>
-            {
-                overlayDisplayed &&
+            {overlayDisplayed &&
                 <ProjectOverlay
-                    title={props.title}
-                    year={props.year}
-                    client={props.client}
-                    web={props.web}
-                    description={props.description}
-                    video={props.video}
+                    title={title}
+                    year={year}
+                    client={client}
+                    web={web}
+                    description={description}
+                    video={video}
                     onClose={handleClose}
-                />
-            }
+                />}
             <div
                 className={styles.tile}
                 onMouseOver={handleMouseOver}
                 onMouseOut={handleMouseOut}
                 onClick={handleTileClicked}
             >
-                <img src={props.imgSrc} alt={props.imgAlt} />
+                <img src={imgSrc} alt={imgAlt} />
 
                 {tileOverlayed && (
                     <div className={styles['overlay-wrapper']}>
                         <div className={styles.overlay}>
-                            <h4>{props.type}</h4>
-                            <p>{props.role}</p>
-                            <h3>{props.title}</h3>
+                            <h4>{type}</h4>
+                            <p>{role}</p>
+                            <h3>{title}</h3>
                         </div>
                     </div>
                 )}
