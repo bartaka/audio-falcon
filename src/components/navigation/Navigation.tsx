@@ -4,11 +4,11 @@ import styles from './Navigation.module.scss';
 import logo from '../../assets/logo/AF_Logo_With name.svg';
 
 const Navigation = (): React.ReactElement => {
-    const navLinks: string[][] = [
-        ['work', 'portfolio'],
-        ['services', 'what-we-do'],
-        ['about us', 'about-us'],
-        ['contact', 'contact']
+    const navLinks = [
+        { link: 'work', url: 'portfolio' },
+        { link: 'services', url: 'what-we-do' },
+        { link: 'about us', url: 'about-us' },
+        { link: 'contact', url: 'contact' }
     ];
 
     return (
@@ -21,17 +21,15 @@ const Navigation = (): React.ReactElement => {
                 />
             </a>
             <ul>
-                <li>
-                </li>
-                {navLinks.map(link => (
-                    <li key={link[1]}>
+                {navLinks.map(entry => (
+                    <li key={entry.link}>
                         <Link
-                            to={link[1]}
+                            to={entry.url}
                             smooth
                             duration={1000}
                             offset={-10}
                         >
-                            {link[0]}
+                            {entry.link}
                         </Link>
                     </li>
                 ))}

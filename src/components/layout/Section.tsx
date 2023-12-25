@@ -18,10 +18,8 @@ const Section = (props: Props) => {
         >
             <div className={styles['section-heading']}>
                 <h2>{heading}</h2>
-                {
-                    subheading &&
-                    <h3>{subheading}</h3>
-                }
+                {subheading &&
+                    <h3>{subheading}</h3>}
             </div>
             {children}
         </section>

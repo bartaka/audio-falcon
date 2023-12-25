@@ -28,6 +28,7 @@ type PropsProjectOverlay = {
 };
 
 const Backdrop = (props: PropsBackdrop) => {
+    const { onClose } = props;
     const [visible, setVisible] = useState(false);
 
     const toggleBodyScroll = (disable: boolean) => {
@@ -47,12 +48,13 @@ const Backdrop = (props: PropsBackdrop) => {
     return (
         <div
             className={`${styles.backdrop} ${styles['fade-in']} ${visible ? styles.visible : ''}`}
-            onClick={props.onClose}
+            onClick={onClose}
         ></div>
     );
 };
 
 const ModalWindow = (props: PropsModalWindow) => {
+    const { title, year, client, web, description, video, onClose } = props;
     const [visible, setVisible] = useState<boolean>(false);
 
     useEffect(() => {
@@ -63,27 +65,29 @@ const ModalWindow = (props: PropsModalWindow) => {
 
     return (
         <div className={`${styles.modal} ${styles['fade-in']} ${visible ? styles.visible : ''}`}>
-            <h2>{props.title}</h2>
+            <h2>{title}</h2>
             <div className={styles['modal-content']}>
                 <div className={styles['modal-vid']}>
                     <iframe
-                        id="inlineFrameExample"
-                        title="Inline Frame Example"
-                        src={`https://www.youtube.com/embed/${new URL(props.video).searchParams.get('v')}`}
+                        id="inlineFrame"
+                        title="Inline Frame"
+                        src={`https://www.youtube.com/embed/${new URL(video).searchParams.get('v')}`}
                     ></iframe>
                 </div>
                 <div className={styles['modal-data']}>
-                    <p>YEAR: {props.year}</p>
-                    <p>CLIENT: {props.client}</p>
-                    <p>WEB: <a href={props.web} target='_blank' rel='noreferrer'>{props.web}</a></p>
-                    <p>DESCRIPTION: {props.description}</p>
+                    <p>YEAR: {year}</p>
+                    <p>CLIENT: {client}</p>
+                    <p>WEB: <a href={web} target='_blank' rel='noreferrer'>{web}</a></p>
+                    <p>DESCRIPTION: {description}</p>
                 </div>
+                <button onClick={onClose}>close</button>
             </div>
         </div>
     );
 };
 
 const ProjectOverlay = (props: PropsProjectOverlay) => {
+    const { title, year, client, web, description, video, onClose } = props;
     const backdropRoot = document.getElementById('backdrop-root');
     const modalRoot = document.getElementById('modal-root');
 
@@ -94,18 +98,18 @@ const ProjectOverlay = (props: PropsProjectOverlay) => {
     return (
         <>
             {ReactDOM.createPortal(
-                <Backdrop onClose={props.onClose} />,
+                <Backdrop onClose={onClose} />,
                 backdropRoot
             )}
             {ReactDOM.createPortal(
                 <ModalWindow
-                    title={props.title}
-                    year={props.year}
-                    client={props.client}
-                    web={props.web}
-                    description={props.description}
-                    video={props.video}
-                    onClose={props.onClose}
+                    title={title}
+                    year={year}
+                    client={client}
+                    web={web}
+                    description={description}
+                    video={video}
+                    onClose={onClose}
                 />,
                 modalRoot
             )}
