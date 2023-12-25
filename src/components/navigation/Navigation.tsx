@@ -21,8 +21,6 @@ const Navigation = (): React.ReactElement => {
                 />
             </a>
             <ul>
-                <li>
-                </li>
                 {navLinks.map(entry => (
                     <li key={entry.link}>
                         <Link
