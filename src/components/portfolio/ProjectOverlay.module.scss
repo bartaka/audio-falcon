@@ -54,6 +54,15 @@
                     margin-top: 3rem;
                 }
 
+                & a {
+                    text-decoration: none;
+                    color: $text-grey;
+
+                    &:hover {
+                        color: $text-color-main;
+                    }
+                }
+
                 & .description-term {
                     font-weight: 800;
                 }
