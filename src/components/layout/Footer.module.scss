@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import '../../scss/variables.scss';
 
 .footer {
     font-family: 'Poppins', sans-serif;
-    background-color: #292C36;
+    background-color: $bg-color-sec;
     color: #FFFFFF;
     padding: 2rem;
     text-align: center;
