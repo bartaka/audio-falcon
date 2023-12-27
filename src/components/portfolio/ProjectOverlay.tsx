@@ -54,7 +54,7 @@ const Backdrop = (props: PropsBackdrop) => {
 };
 
 const ModalWindow = (props: PropsModalWindow) => {
-    const { title, year, client, web, description, video, onClose } = props;
+    const { title, year, client, web, description, video } = props;
     const [visible, setVisible] = useState<boolean>(false);
 
     useEffect(() => {
