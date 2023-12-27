@@ -49,7 +49,7 @@ const Backdrop = (props: PropsBackdrop) => {
         <div
             className={`${styles.backdrop} ${styles['fade-in']} ${visible ? styles.visible : ''}`}
             onClick={onClose}
-        ></div>
+        />
     );
 };
 
