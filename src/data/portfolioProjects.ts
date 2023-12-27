@@ -1,11 +1,11 @@
 import img1 from '../assets/portfolio/1-Game-Degenheim.jpg'
-import img3 from '../assets/portfolio/2-Game-Vivat.jpg'
-import img4 from '../assets/portfolio/3-Film-OMS.jpg'
-import img5 from '../assets/portfolio/4-TV-Series-Volha.jpg'
-import img6 from '../assets/portfolio/5-Netflix-Dubbing-CABINET.jpg'
-import img7 from '../assets/portfolio/6-AK-Mlcet.jpg'
-import img8 from '../assets/portfolio/7-Comms-CVUT-Vianoce.jpg'
-import img9 from '../assets/portfolio/8-Film-Repulse.jpg'
+import img3 from '../assets/portfolio/3-Game-Vivat.jpg'
+import img4 from '../assets/portfolio/4-Film-OMS.jpg'
+import img5 from '../assets/portfolio/5-TV-Series-Volha.jpg'
+import img6 from '../assets/portfolio/6-Netflix-Dubbing-CABINET.jpg'
+import img7 from '../assets/portfolio/7-AK-Mlcet.jpg'
+import img8 from '../assets/portfolio/8-Comms-CVUT-Vianoce.jpg'
+import img9 from '../assets/portfolio/9-Film-Repulse.jpg'
 
 interface ProjectData {
     id: number;
