@@ -8,7 +8,7 @@ type Props = {
     p: string;
 };
 
-const Activity = (props: Props) => {
+const Activity = (props: Props): React.ReactElement => {
     const { imgSrc, imgAlt, h3, h4, p } = props;
 
     return (

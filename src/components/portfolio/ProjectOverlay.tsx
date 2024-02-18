@@ -29,7 +29,7 @@ type PropsProjectOverlay = {
     onClose: MouseEventHandler<HTMLElement>;
 };
 
-const Backdrop = (props: PropsBackdrop) => {
+const Backdrop = (props: PropsBackdrop): React.ReactElement => {
     const { onClose } = props;
     const [visible, setVisible] = useState(false);
 
@@ -55,7 +55,7 @@ const Backdrop = (props: PropsBackdrop) => {
     );
 };
 
-const ModalWindow = (props: PropsModalWindow) => {
+const ModalWindow = (props: PropsModalWindow): React.ReactElement => {
     const { title, year, role, client, web, description, video } = props;
     const [visible, setVisible] = useState<boolean>(false);
 
@@ -100,7 +100,7 @@ const ModalWindow = (props: PropsModalWindow) => {
     );
 };
 
-const ProjectOverlay = (props: PropsProjectOverlay) => {
+const ProjectOverlay = (props: PropsProjectOverlay): React.ReactElement => {
     const { title, year, role, client, web, description, video, onClose } = props;
     const backdropRoot = document.getElementById('backdrop-root');
     const modalRoot = document.getElementById('modal-root');

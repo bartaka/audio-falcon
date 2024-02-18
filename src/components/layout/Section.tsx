@@ -1,14 +1,13 @@
-import { ReactNode } from 'react';
 import styles from './Section.module.scss';
 
 type Props = {
     sectionId: string;
     heading: string;
     subheading?: string;
-    children: ReactNode;
+    children: React.ReactNode;
 };
 
-const Section = (props: Props) => {
+const Section = (props: Props): React.ReactElement => {
     const { sectionId, heading, subheading, children } = props;
 
     return (
