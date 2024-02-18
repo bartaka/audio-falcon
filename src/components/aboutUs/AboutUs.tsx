@@ -8,12 +8,11 @@ const AboutUs = (): React.ReactElement => {
         <Section
             sectionId='about-us'
             heading='About us'
-            subheading='Silny, chytry, seksi as fuck'
+            subheading='Welcome to our website!'
         >
             <div className={styles.container}>
                 <img src={image} alt='Luky & Bara' />
                 <div className={styles.text}>
-                    <h3>welcome to our website!</h3>
                     <p>
                         We are <span className={styles.bold}>Lukas Holocsy</span> and <span className={styles.bold}>Barbora Kaňoková</span>, a dynamic duo based in Prague, Czech Republic. Lukas, a talented film and video game sound designer from Slovakia, has a remarkable knack for capturing emotions and enhancing storytelling through sound. Meanwhile, Barbora, with her administrative skills, ensures that our collaborative projects run smoothly and efficiently.
                     </p>

@@ -39,20 +39,6 @@ export const projectsData: ProjectData[] = [
         video: 'https://www.youtube.com/watch?v=t-7ZVClQDjw'
     },
     {
-        id: 2,
-        projectName: 'Bullwagon Business',
-        projectType: 'video game',
-        role: 'role',
-        work: 'Sound Design, Audio and Music Implementation, Voice Acting, Mix',
-        imgSrc: img1,
-        imgAlt: 'Bullwagon Business',
-        year: '2023',
-        client: 'Apper Interactive',
-        web: 'https://bullwagonbuisness.com/',
-        description: 'Smash the reins and set off in a bull-drawn wagon to explore the beautiful countryside, have adventures, but most of all, trade. But don\'t expect it to be easy. There are bandits and other vermin everywhere, and if you don\'t fight them off, you\'ll lose them! Get in!',
-        video: 'https://www.youtube.com/watch?v=C4RKWJqgT2A'
-    },
-    {
         id: 3,
         projectName: 'Vivat Slovakia',
         projectType: 'video game',
