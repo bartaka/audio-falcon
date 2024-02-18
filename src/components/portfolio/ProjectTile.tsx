@@ -10,7 +10,7 @@ type Props = {
     role: string;
     title: string;
     year: string;
-    client: string;
+    client?: string;
     web: string;
     description: string;
     video: string;
@@ -24,7 +24,7 @@ const ProjectTile = (props: Props): React.ReactElement => {
         role,
         title,
         year,
-        client,
+        client = '',
         web,
         description,
         video
@@ -44,6 +44,7 @@ const ProjectTile = (props: Props): React.ReactElement => {
                 <ProjectOverlay
                     title={title}
                     year={year}
+                    role={role}
                     client={client}
                     web={web}
                     description={description}

@@ -12,11 +12,10 @@ interface ProjectData {
     projectName: string;
     projectType: string;
     role: string;
-    work: string;
     imgSrc: string;
     imgAlt: string;
     year: string;
-    client: string;
+    client?: string;
     web: string;
     note?: string;
     description: string;
@@ -28,8 +27,7 @@ export const projectsData: ProjectData[] = [
         id: 1,
         projectName: 'degenheim',
         projectType: 'video game',
-        role: 'role',
-        work: 'Sound Design, Audio and Music Implementation, Voice Acting, Mix',
+        role: 'Sound Design, Audio and Music Implementation, Voice Acting, Mix',
         imgSrc: img1,
         imgAlt: 'Degenheim',
         year: '2023',
@@ -42,8 +40,7 @@ export const projectsData: ProjectData[] = [
         id: 3,
         projectName: 'Vivat Slovakia',
         projectType: 'video game',
-        role: 'role',
-        work: 'Sound Design, Audio and Music Implementation, Voice Acting, Mix',
+        role: 'Sound Design, Audio and Music Implementation, Voice Acting, Mix',
         imgSrc: img3,
         imgAlt: 'Vivat Slovakia',
         year: '2023',
@@ -56,12 +53,10 @@ export const projectsData: ProjectData[] = [
         id: 4,
         projectName: 'ONEMANSHOW: The Movie',
         projectType: 'film',
-        role: 'role',
-        work: 'Dialog Edit, SFX Edit',
+        role: 'Dialog Edit, SFX Edit',
         imgSrc: img4,
         imgAlt: 'ONEMANSHOW: The Movie',
         year: '2023',
-        client: '?',
         web: 'https://onemanshow.cz/',
         note: 'Post-Production was done in Studio Beep',
         description: 'The film was linked to a contest with possibility of winning a 22 million CZK, which viewers can enter after purchasing a ticket. It reportedly led some moviegoers to buy tickets repeatedly to increase their chances of winning.',
@@ -71,12 +66,10 @@ export const projectsData: ProjectData[] = [
         id: 5,
         projectName: 'Volha',
         projectType: 'TV Series',
-        role: 'role',
-        work: 'Dialog Edit',
+        role: 'Dialog Edit',
         imgSrc: img5,
         imgAlt: 'Volha',
         year: '2023',
-        client: '?',
         web: 'https://www.imdb.com/title/tt27259817/',
         note: 'Post-Production was done in Studio Beep',
         description: 'Standa Pekárek finishes compulsory military service and becomes a chauffeur at communist Czech TV in 1971 dreaming of his own Volga (Volha). Willing to do anything to fulfill his dream he agrees to be a spy under code-name Volha.',
@@ -86,12 +79,10 @@ export const projectsData: ProjectData[] = [
         id: 6,
         projectName: 'Guillermo del Toro\'s Cabinet of Curiosities',
         projectType: 'TV Series',
-        role: 'role',
-        work: 'Dubbing Edit and Mix',
+        role: 'Dubbing Edit and Mix',
         imgSrc: img6,
         imgAlt: 'Cabinet of Curiosities',
         year: '2022',
-        client: '?',
         web: 'https://www.imdb.com/title/tt8415836/?ref_=fn_al_tt_1',
         note: 'Post-Production was done in Studio Beep',
         description: 'Cabinet of Curioisites is a horror anthology streaming television series created by Guillermo del Toro for Netflix. It features eight modern horror stories in the traditions of the Gothic and Grand Guignol genres.',
@@ -99,14 +90,12 @@ export const projectsData: ProjectData[] = [
     },
     {
         id: 7,
-        projectName: 'Mlčet jako hrob (Hushed Up)',
+        projectName: 'Mlcet jako hrob (Hushed Up)',
         projectType: 'Audiobook (Czech)',
-        role: 'role',
-        work: 'Recording, Edit, Mix',
+        role: 'Recording, Edit, Mix',
         imgSrc: img7,
         imgAlt: 'Hushed Up',
         year: '2022',
-        client: '?',
         web: 'https://www.audiolibrix.com/cs/Directory/Book/12885/Audiokniha-Mlcet-jako-hrob-Lone-Theilsova',
         note: 'Post-Production was done in Studio Beep.',
         description: 'Hushed Up is the fourth book in Lone Theil’s nerve-wracking crime series about Nora Sand, which this time has to try to help a large number of young girls being abused. As earlier, the current Nora Sand crime novel cover a nasty case based on real events.',
@@ -114,14 +103,12 @@ export const projectsData: ProjectData[] = [
     },
     {
         id: 8,
-        projectName: 'Merry Christmas ČVUT',
+        projectName: 'Merry Christmas CVUT',
         projectType: 'spot',
-        role: 'role',
-        work: 'SFX Edit, Mix',
+        role: 'SFX Edit, Mix',
         imgSrc: img8,
         imgAlt: 'CVUT',
         year: '2022',
-        client: '?',
         web: 'https://www.youtube.com/watch?v=wiE7GfN358s',
         description: 'The Faculty of Electrical Engineering of the CTU in Prague wishes you a Merry Christmas and much success, health and energy in 2022!',
         video: 'https://www.youtube.com/watch?v=wiE7GfN358s'
@@ -130,12 +117,10 @@ export const projectsData: ProjectData[] = [
         id: 9,
         projectName: 'Repulse',
         projectType: 'film',
-        role: 'role',
-        work: 'SFX Edit',
+        role: 'SFX Edit',
         imgSrc: img9,
         imgAlt: 'Repulse',
         year: '2021',
-        client: '?',
         web: 'https://www.imdb.com/title/tt14188996/',
         note: 'Post-Production was done in Studio Beep.',
         description: 'A dark drama starring an unexpectedly maniacal Stepán Kozub and an unstable heroine played by Pavla Gajdosíková.',

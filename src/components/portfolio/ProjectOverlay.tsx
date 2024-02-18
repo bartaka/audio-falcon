@@ -10,6 +10,7 @@ type PropsBackdrop = {
 type PropsModalWindow = {
     title: string;
     year: string;
+    role: string;
     client: string;
     web: string;
     description: string;
@@ -20,6 +21,7 @@ type PropsModalWindow = {
 type PropsProjectOverlay = {
     title: string;
     year: string;
+    role: string;
     client: string;
     web: string;
     description: string;
@@ -54,7 +56,7 @@ const Backdrop = (props: PropsBackdrop) => {
 };
 
 const ModalWindow = (props: PropsModalWindow) => {
-    const { title, year, client, web, description, video } = props;
+    const { title, year, role, client, web, description, video } = props;
     const [visible, setVisible] = useState<boolean>(false);
 
     useEffect(() => {
@@ -79,8 +81,13 @@ const ModalWindow = (props: PropsModalWindow) => {
                         <span className={styles['description-term']}>YEAR:</span> {year}
                     </p>
                     <p>
-                        <span className={styles['description-term']}>CLIENT:</span> {client}
+                        <span className={styles['description-term']}>WORK:</span> {role}
                     </p>
+                    {client &&
+                        <p>
+                            <span className={styles['description-term']}>CLIENT:</span> {client}
+                        </p>
+                    }
                     <p>
                         <span className={styles['description-term']}>WEB:</span> <a href={web} target='_blank' rel='noreferrer'>{web}</a>
                     </p>
@@ -94,7 +101,7 @@ const ModalWindow = (props: PropsModalWindow) => {
 };
 
 const ProjectOverlay = (props: PropsProjectOverlay) => {
-    const { title, year, client, web, description, video, onClose } = props;
+    const { title, year, role, client, web, description, video, onClose } = props;
     const backdropRoot = document.getElementById('backdrop-root');
     const modalRoot = document.getElementById('modal-root');
 
@@ -112,6 +119,7 @@ const ProjectOverlay = (props: PropsProjectOverlay) => {
                 <ModalWindow
                     title={title}
                     year={year}
+                    role={role}
                     client={client}
                     web={web}
                     description={description}

@@ -5,7 +5,7 @@
     width: calc(100% + 5px);
     height: calc(100% + 5px);
     backdrop-filter: blur(0px) brightness(100%);
-    transition: backdrop-filter .5s ease-in-out;
+    transition: backdrop-filter .3s ease-in-out;
 
     &:hover {
         backdrop-filter: blur(3px) brightness(50%);
@@ -14,7 +14,7 @@
 
 .tile {
     position: relative;
-    transition: backdrop-filter .5s;
+    transition: backdrop-filter .3s;
 
     & img {
         width: 100%;
@@ -39,7 +39,7 @@
         & h3 {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            transition: opacity .3s ease-in-out, transform .3s ease-in-out;
         }
 
         &:hover {
