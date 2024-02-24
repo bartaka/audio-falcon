@@ -13,6 +13,7 @@ type PropsModalWindow = {
     role: string;
     client: string;
     web: string;
+    note: string;
     description: string;
     video: string;
     onClose: MouseEventHandler<HTMLButtonElement>;
@@ -24,6 +25,7 @@ type PropsProjectOverlay = {
     role: string;
     client: string;
     web: string;
+    note: string;
     description: string;
     video: string;
     onClose: MouseEventHandler<HTMLElement>;
@@ -56,7 +58,7 @@ const Backdrop = (props: PropsBackdrop): React.ReactElement => {
 };
 
 const ModalWindow = (props: PropsModalWindow): React.ReactElement => {
-    const { title, year, role, client, web, description, video } = props;
+    const { title, year, role, client, web, note, description, video } = props;
     const [visible, setVisible] = useState<boolean>(false);
 
     useEffect(() => {
@@ -91,6 +93,11 @@ const ModalWindow = (props: PropsModalWindow): React.ReactElement => {
                     <p>
                         <span className={styles['description-term']}>WEB:</span> <a href={web} target='_blank' rel='noreferrer'>{web}</a>
                     </p>
+                    {note &&
+                        <p className={styles['note']}>
+                            {note}
+                        </p>
+                    }
                     <p>
                         <span className={styles['description-term']}>DESCRIPTION:</span> {description}
                     </p>
@@ -101,7 +108,7 @@ const ModalWindow = (props: PropsModalWindow): React.ReactElement => {
 };
 
 const ProjectOverlay = (props: PropsProjectOverlay): React.ReactElement => {
-    const { title, year, role, client, web, description, video, onClose } = props;
+    const { title, year, role, client, web, note, description, video, onClose } = props;
     const backdropRoot = document.getElementById('backdrop-root');
     const modalRoot = document.getElementById('modal-root');
 
@@ -122,6 +129,7 @@ const ProjectOverlay = (props: PropsProjectOverlay): React.ReactElement => {
                     role={role}
                     client={client}
                     web={web}
+                    note={note}
                     description={description}
                     video={video}
                     onClose={onClose}

@@ -21,6 +21,7 @@ const Portfolio = (): React.ReactElement => {
                         year={project.year}
                         client={project.client}
                         web={project.web}
+                        note={project.note}
                         description={project.description}
                         video={project.video}
                     />

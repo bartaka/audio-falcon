@@ -12,6 +12,7 @@ type Props = {
     year: string;
     client?: string;
     web: string;
+    note?: string;
     description: string;
     video: string;
 };
@@ -26,6 +27,7 @@ const ProjectTile = (props: Props): React.ReactElement => {
         year,
         client = '',
         web,
+        note = '',
         description,
         video
     } = props;
@@ -47,6 +49,7 @@ const ProjectTile = (props: Props): React.ReactElement => {
                     role={role}
                     client={client}
                     web={web}
+                    note={note}
                     description={description}
                     video={video}
                     onClose={handleClose}

@@ -58,7 +58,7 @@ export const projectsData: ProjectData[] = [
         imgAlt: 'ONEMANSHOW: The Movie',
         year: '2023',
         web: 'https://onemanshow.cz/',
-        note: 'Post-Production was done in Studio Beep',
+        note: 'Post-Production was done in Studio Beep.',
         description: 'The film was linked to a contest with possibility of winning a 22 million CZK, which viewers can enter after purchasing a ticket. It reportedly led some moviegoers to buy tickets repeatedly to increase their chances of winning.',
         video: 'https://www.youtube.com/watch?v=PV3Q8BZmq7s'
     },
@@ -71,7 +71,7 @@ export const projectsData: ProjectData[] = [
         imgAlt: 'Volha',
         year: '2023',
         web: 'https://www.imdb.com/title/tt27259817/',
-        note: 'Post-Production was done in Studio Beep',
+        note: 'Post-Production was done in Studio Beep.',
         description: 'Standa Pekárek finishes compulsory military service and becomes a chauffeur at communist Czech TV in 1971 dreaming of his own Volga (Volha). Willing to do anything to fulfill his dream he agrees to be a spy under code-name Volha.',
         video: 'https://www.youtube.com/watch?v=Lri5Lv21G44'
     },
@@ -84,7 +84,7 @@ export const projectsData: ProjectData[] = [
         imgAlt: 'Cabinet of Curiosities',
         year: '2022',
         web: 'https://www.imdb.com/title/tt8415836/?ref_=fn_al_tt_1',
-        note: 'Post-Production was done in Studio Beep',
+        note: 'Post-Production was done in Studio Beep.',
         description: 'Cabinet of Curioisites is a horror anthology streaming television series created by Guillermo del Toro for Netflix. It features eight modern horror stories in the traditions of the Gothic and Grand Guignol genres.',
         video: 'https://www.youtube.com/watch?v=E3E1URhCR60'
     },
@@ -98,7 +98,7 @@ export const projectsData: ProjectData[] = [
         year: '2022',
         web: 'https://www.audiolibrix.com/cs/Directory/Book/12885/Audiokniha-Mlcet-jako-hrob-Lone-Theilsova',
         note: 'Post-Production was done in Studio Beep.',
-        description: 'Hushed Up is the fourth book in Lone Theil’s nerve-wracking crime series about Nora Sand, which this time has to try to help a large number of young girls being abused. As earlier, the current Nora Sand crime novel cover a nasty case based on real events.',
+        description: 'Hushed Up is the fourth book in Lone Theil\'s nerve-wracking crime series about Nora Sand, which this time has to try to help a large number of young girls being abused. As earlier, the current Nora Sand crime novel cover a nasty case based on real events.',
         video: ''
     },
     {
