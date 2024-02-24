@@ -1,7 +1,7 @@
-import Section from "../layout/Section";
-import Activity from "./Activity";
+import Section from '../layout/Section';
+import Activity from './Activity';
 
-import { whatWeDoData as data } from "../../data/whatWeDo";
+import { whatWeDoData as data } from '../../data/whatWeDo';
 import styles from './WhatWeDo.module.scss';
 
 const WhatWeDo = (): React.ReactElement => {

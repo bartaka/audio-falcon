@@ -1,5 +1,5 @@
-import Section from "../layout/Section";
-import ContactUsForm from "./ContactUsForm";
+import Section from '../layout/Section';
+import ContactUsForm from './ContactUsForm';
 
 const ContactUsSection = (): React.ReactElement => {
     return (

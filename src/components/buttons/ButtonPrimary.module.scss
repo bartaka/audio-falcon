@@ -3,11 +3,11 @@
 .btn {
     width: 25rem;
     padding: 1rem 0;
-    color: $text-orange;
+    color: $text-yellow;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     background-color: $bg-color-main;
-    border: 2px solid $text-orange;
+    border: 2px solid $text-yellow;
     border-radius: 5px;
     transition: all .5s;
     cursor: pointer;
@@ -17,7 +17,7 @@
     }
 
     &:hover {
-        color: $text-color-main;
-        background-color: #b96600;
+        color: $bg-color-main;
+        background-color: $text-yellow;
     }
 }

@@ -1,5 +1,5 @@
-import Navigation from "../navigation/Navigation";
-import Banners from "../carousel/Banners";
+import Navigation from '../navigation/Navigation';
+import Banners from '../carousel/Banners';
 
 const Header = (): React.ReactElement => {
     return (

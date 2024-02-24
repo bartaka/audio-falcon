@@ -1,6 +1,6 @@
-import Section from "../layout/Section";
-import ProjectTile from "./ProjectTile";
-import { projectsData as data } from "../../data/portfolioProjects";
+import Section from '../layout/Section';
+import ProjectTile from './ProjectTile';
+import { projectsData as data } from '../../data/portfolioProjects';
 import styles from './Portfolio.module.scss';
 
 const Portfolio = (): React.ReactElement => {
@@ -21,6 +21,7 @@ const Portfolio = (): React.ReactElement => {
                         year={project.year}
                         client={project.client}
                         web={project.web}
+                        note={project.note}
                         description={project.description}
                         video={project.video}
                     />

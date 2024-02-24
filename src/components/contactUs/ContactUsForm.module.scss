@@ -38,7 +38,7 @@
     & input:focus,
     textarea:focus {
         outline: none !important;
-        border: 2px solid $text-orange;
+        border: 2px solid $text-yellow;
     }
 
     & input {
@@ -48,22 +48,17 @@
     & button {
         width: 25rem;
         padding: 1rem 0;
-        color: $text-orange;
+        color: $text-yellow;
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
         background-color: $bg-color-main;
-        border: 2px solid $text-orange;
+        border: 2px solid $text-yellow;
         border-radius: 5px;
         transition: all .5s;
         cursor: pointer;
 
         &::first-letter {
             text-transform: capitalize;
-        }
-
-        &:hover {
-            color: $text-color-main;
-            background-color: #b96600;
         }
     }
 }

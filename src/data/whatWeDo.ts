@@ -27,7 +27,7 @@ export const whatWeDoData: WhatWeDoData[] = [
         imgAlt: 'activity icon - film location sound',
         h3: 'field recording & sfx creation',
         h4: 'location & studio',
-        p: 'From recorded surround ambiences to highly processed cinematic impacts, we create soundscapes for a truly immersive experience.Let\'s elevate your project with sound effects that resonate authentically, adding a layers of depth and emotion that amaze your audience.'
+        p: 'From recorded surround ambiences to highly processed cinematic impacts, we create soundscapes for a truly immersive experience. Let\'s elevate your project with sound effects that resonate authentically, adding a layers of depth and emotion that amaze your audience.'
     },
     {
         id: 3,
@@ -35,7 +35,7 @@ export const whatWeDoData: WhatWeDoData[] = [
         imgAlt: 'activity icon - film post-production',
         h3: 'film & documentary',
         h4: 'location sound',
-        p: 'At the heart of every great film lies the essence of pristine location sound.Specializing in documentary series and smaller film productions, our team brings years of experience to the table. Armed with professional gear, we skillfully capture the nuances of every scene, ensuring your project benefits from top - tier audio quality.',
+        p: 'At the heart of every great film lies the essence of pristine location sound. Specializing in documentary series and smaller film productions, our team brings years of experience to the table. Armed with professional gear, we skillfully capture the nuances of every scene, ensuring your project benefits from top - tier audio quality.',
     },
     {
         id: 4,
@@ -43,6 +43,6 @@ export const whatWeDoData: WhatWeDoData[] = [
         imgAlt: 'activity icon - field recording',
         h3: 'film & documentary',
         h4: 'post-production',
-        p: 'Audio post - production, including sound design, edit, voice recording and final mix is the high point of film, commercial and documentary sound journey.It\'s about ensuring every sound resonates seamlessly, creating a beautiful audio spectrum that enhances the overall cinematic experience.'
+        p: 'Audio post - production, including sound design, edit, voice recording and final mix is the high point of film, commercial and documentary sound journey. It\'s about ensuring every sound resonates seamlessly, creating a beautiful audio spectrum that enhances the overall cinematic experience.'
     }
 ];

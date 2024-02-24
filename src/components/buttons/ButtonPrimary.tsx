@@ -5,7 +5,7 @@ type Props = {
     text: string;
 };
 
-const ButtonPrimary = (props: Props) => {
+const ButtonPrimary = (props: Props): React.ReactElement => {
     const { btnType, text } = props;
 
     return (
