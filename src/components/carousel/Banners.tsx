@@ -23,23 +23,23 @@ const Banners = (): React.ReactElement => {
     >
       <div>
         <picture>
-          <source media="(max-width: 799px)" srcSet={banner1mobile} />
-          <source media="(min-width: 800px)" srcSet={banner1desktop} />
-          <img src="fallback-banner1.jpg" alt="Placeholder for future carousel" />
+          <source media='(max-width: 799px)' srcSet={banner1mobile} />
+          <source media='(min-width: 800px)' srcSet={banner1desktop} />
+          <img src='fallback-banner1.jpg' alt='Placeholder for future carousel' />
         </picture>
       </div>
       <div>
         <picture>
-          <source media="(max-width: 799px)" srcSet={banner2mobile} />
-          <source media="(min-width: 800px)" srcSet={banner2desktop} />
-          <img src="fallback-banner1.jpg" alt="Placeholder for future carousel" />
+          <source media='(max-width: 799px)' srcSet={banner2mobile} />
+          <source media='(min-width: 800px)' srcSet={banner2desktop} />
+          <img src='fallback-banner1.jpg' alt='Placeholder for future carousel' />
         </picture>
       </div>
       <div>
         <picture>
-          <source media="(max-width: 799px)" srcSet={banner3mobile} />
-          <source media="(min-width: 800px)" srcSet={banner3desktop} />
-          <img src="fallback-banner1.jpg" alt="Placeholder for future carousel" />
+          <source media='(max-width: 799px)' srcSet={banner3mobile} />
+          <source media='(min-width: 800px)' srcSet={banner3desktop} />
+          <img src='fallback-banner1.jpg' alt='Placeholder for future carousel' />
         </picture>
       </div>
     </Carousel>

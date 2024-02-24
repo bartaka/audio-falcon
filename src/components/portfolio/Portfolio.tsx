@@ -1,6 +1,6 @@
-import Section from "../layout/Section";
-import ProjectTile from "./ProjectTile";
-import { projectsData as data } from "../../data/portfolioProjects";
+import Section from '../layout/Section';
+import ProjectTile from './ProjectTile';
+import { projectsData as data } from '../../data/portfolioProjects';
 import styles from './Portfolio.module.scss';
 
 const Portfolio = (): React.ReactElement => {

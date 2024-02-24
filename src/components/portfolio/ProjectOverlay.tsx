@@ -73,8 +73,8 @@ const ModalWindow = (props: PropsModalWindow): React.ReactElement => {
             <div className={styles['modal-content']}>
                 <div className={styles['modal-vid']}>
                     <iframe
-                        id="inlineFrame"
-                        title="Inline Frame"
+                        id='inlineFrame'
+                        title='Inline Frame'
                         src={`https://www.youtube.com/embed/${new URL(video).searchParams.get('v')}`}
                     />
                 </div>
@@ -94,9 +94,15 @@ const ModalWindow = (props: PropsModalWindow): React.ReactElement => {
                         <span className={styles['description-term']}>WEB:</span> <a href={web} target='_blank' rel='noreferrer'>{web}</a>
                     </p>
                     {note &&
-                        <p className={styles['note']}>
-                            {note}
-                        </p>
+                        <p
+                            className={styles['note']}
+                            dangerouslySetInnerHTML={{
+                                __html: note.replace(
+                                    'Studio Beep',
+                                    '<a href="https://studiobeep.cz" target="_blank" rel="noopener noreferrer">Studio Beep</a>'
+                                )
+                            }}
+                        />
                     }
                     <p>
                         <span className={styles['description-term']}>DESCRIPTION:</span> {description}
