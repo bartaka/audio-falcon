@@ -58,7 +58,7 @@ const Backdrop = (props: PropsBackdrop): React.ReactElement => {
 };
 
 const ModalWindow = (props: PropsModalWindow): React.ReactElement => {
-    const { title, year, role, client, web, note, description, video } = props;
+    const { title, year, role, client, web, note, description, video, onClose } = props;
     const [visible, setVisible] = useState<boolean>(false);
 
     useEffect(() => {
@@ -69,6 +69,7 @@ const ModalWindow = (props: PropsModalWindow): React.ReactElement => {
 
     return (
         <div className={`${styles.modal} ${styles['fade-in']} ${visible ? styles.visible : ''}`}>
+            <button className={styles['close-button']} onClick={onClose}>&times;</button>
             <h2>{title}</h2>
             <div className={styles['modal-content']}>
                 <div className={styles['modal-vid']}>

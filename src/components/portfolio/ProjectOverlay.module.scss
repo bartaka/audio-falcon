@@ -23,6 +23,17 @@
     border: 1px solid $bg-color-main;
     padding: 3rem;
 
+    & .close-button {
+        display: none;
+        color: $text-color-main;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: transparent;
+        border: none;
+        font-size: 3rem;
+    }
+
     & .modal-content {
         margin-top: 5rem;
         display: flex;
@@ -110,6 +121,10 @@
     .modal {
         width: 90%;
         padding: 1.5rem;
+
+        & .close-button {
+            display: block;
+        }
 
         & .modal-content {
             flex-direction: column;

@@ -21,7 +21,9 @@
 // Mobile
 @media (max-width: 767px) {
     .section {
-        .section-heading {
+        margin: 10rem 0;
+
+        & .section-heading {
             width: 50%;
         }
     }
@@ -30,7 +32,7 @@
 // Big screen
 @media (min-width: 1920px) {
     .section {
-        .section-heading {
+        & .section-heading {
             width: 13%;
         }
     }

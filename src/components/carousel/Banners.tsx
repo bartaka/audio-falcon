@@ -26,21 +26,21 @@ const Banners = (): React.ReactElement => {
         <picture>
           <source media='(max-width: 799px)' srcSet={banner1mobile} />
           <source media='(min-width: 800px)' srcSet={banner1desktop} />
-          <img src='fallback-banner1.jpg' alt='Placeholder for future carousel' />
+          <img src={banner1desktop} alt='Strazov Meadow' />
         </picture>
       </div>
       <div>
         <picture>
           <source media='(max-width: 799px)' srcSet={banner2mobile} />
           <source media='(min-width: 800px)' srcSet={banner2desktop} />
-          <img src='fallback-banner1.jpg' alt='Placeholder for future carousel' />
+          <img src={banner2desktop} alt='Skalnate pleso' />
         </picture>
       </div>
       <div>
         <picture>
           <source media='(max-width: 799px)' srcSet={banner3mobile} />
           <source media='(min-width: 800px)' srcSet={banner3desktop} />
-          <img src='fallback-banner1.jpg' alt='Placeholder for future carousel' />
+          <img src={banner3desktop} alt='Tree Ears' />
         </picture>
       </div>
     </Carousel>
