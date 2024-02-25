@@ -20,6 +20,7 @@ const Banners = (): React.ReactElement => {
       showIndicators={false}
       showStatus={false}
       showThumbs={false}
+      swipeable={false}
     >
       <div>
         <picture>
