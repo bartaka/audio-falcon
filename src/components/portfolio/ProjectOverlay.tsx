@@ -33,9 +33,7 @@ const ProjectOverlay = (props: Props): React.ReactElement => {
     const backdropRoot = document.getElementById('backdrop-root');
     const modalRoot = document.getElementById('modal-root');
 
-    if (!backdropRoot || !modalRoot) {
-        throw new Error('Required root elements not found');
-    }
+    if (!backdropRoot || !modalRoot) throw new Error('Required root elements not found');
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';
