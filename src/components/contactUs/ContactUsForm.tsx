@@ -12,12 +12,12 @@ const ContactUsForm = (): React.ReactElement => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
-        const templateId = import.meta.env.VITE_APP_TEMPLATE_ID;
-        const publicKey = import.meta.env.VITE_APP_PUBLIC_KEY;
+        const serviceId = import.meta.env.VITE_SERVICE_ID;
+        const templateId = import.meta.env.VITE_TEMPLATE_ID;
+        const publicKey = import.meta.env.VITE_PUBLIC_KEY;
 
         if (!serviceId || !templateId || !publicKey) {
-            throw new Error('Environment variables REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, or REACT_APP_PUBLIC_KEY are not defined');
+            throw new Error('Environment variables VITE_APP_SERVICE_ID, VITE_APP_TEMPLATE_ID, or VITE_APP_PUBLIC_KEY are not defined');
         }
 
         if (!form.current) {

@@ -14,7 +14,7 @@ type Props = {
     web: string;
     note?: string;
     description: string;
-    video: string;
+    video?: string;
 };
 
 const ProjectTile = (props: Props): React.ReactElement => {
@@ -29,7 +29,7 @@ const ProjectTile = (props: Props): React.ReactElement => {
         web,
         note = '',
         description,
-        video
+        video = ''
     } = props;
 
     const [tileOverlayed, setTileOverlayed] = useState(false);
@@ -52,6 +52,7 @@ const ProjectTile = (props: Props): React.ReactElement => {
                     note={note}
                     description={description}
                     video={video}
+                    imgSrc={imgSrc}
                     onClose={handleClose}
                 />}
             <div

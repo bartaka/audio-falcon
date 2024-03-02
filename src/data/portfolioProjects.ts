@@ -19,7 +19,7 @@ interface ProjectData {
     web: string;
     note?: string;
     description: string;
-    video: string;
+    video?: string;
 };
 
 export const projectsData: ProjectData[] = [

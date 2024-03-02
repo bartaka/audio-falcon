@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import styles from './ProjectOverlay.module.scss';
 
 type PropsBackdrop = {
-    onClose: MouseEventHandler<HTMLDivElement>;
+    onClose: MouseEventHandler<HTMLElement>;
 };
 
 type PropsModalWindow = {
@@ -15,7 +15,8 @@ type PropsModalWindow = {
     web: string;
     note: string;
     description: string;
-    video: string;
+    video?: string;
+    imgSrc?: string;
     onClose: MouseEventHandler<HTMLButtonElement>;
 };
 
@@ -27,7 +28,8 @@ type PropsProjectOverlay = {
     web: string;
     note: string;
     description: string;
-    video: string;
+    video?: string;
+    imgSrc?: string;
     onClose: MouseEventHandler<HTMLElement>;
 };
 
@@ -58,7 +60,7 @@ const Backdrop = (props: PropsBackdrop): React.ReactElement => {
 };
 
 const ModalWindow = (props: PropsModalWindow): React.ReactElement => {
-    const { title, year, role, client, web, note, description, video, onClose } = props;
+    const { title, year, role, client, web, note, description, video = '', imgSrc = '', onClose } = props;
     const [visible, setVisible] = useState<boolean>(false);
 
     useEffect(() => {
@@ -73,11 +75,17 @@ const ModalWindow = (props: PropsModalWindow): React.ReactElement => {
             <h2>{title}</h2>
             <div className={styles['modal-content']}>
                 <div className={styles['modal-vid']}>
-                    <iframe
-                        id='inlineFrame'
-                        title='Inline Frame'
-                        src={`https://www.youtube.com/embed/${new URL(video).searchParams.get('v')}`}
-                    />
+                    {video ?
+                        <iframe
+                            id='inlineFrame'
+                            title='Inline Frame'
+                            src={`https://www.youtube.com/embed/${new URL(video).searchParams.get('v')}`}
+                        />
+                        :
+                        <img
+                            src={imgSrc}
+                        />
+                    }
                 </div>
                 <div className={styles['modal-data']}>
                     <p>
@@ -115,7 +123,7 @@ const ModalWindow = (props: PropsModalWindow): React.ReactElement => {
 };
 
 const ProjectOverlay = (props: PropsProjectOverlay): React.ReactElement => {
-    const { title, year, role, client, web, note, description, video, onClose } = props;
+    const { title, year, role, client, web, note, description, video, imgSrc, onClose } = props;
     const backdropRoot = document.getElementById('backdrop-root');
     const modalRoot = document.getElementById('modal-root');
 
@@ -139,6 +147,7 @@ const ProjectOverlay = (props: PropsProjectOverlay): React.ReactElement => {
                     note={note}
                     description={description}
                     video={video}
+                    imgSrc={imgSrc}
                     onClose={onClose}
                 />,
                 modalRoot

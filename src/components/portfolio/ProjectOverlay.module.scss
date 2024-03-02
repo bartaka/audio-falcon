@@ -43,7 +43,8 @@
             flex: 1;
             margin-right: 3rem;
 
-            & iframe {
+            & iframe,
+            img {
                 width: 100%;
                 height: 22rem;
                 border: none;
@@ -51,6 +52,11 @@
                 margin: 0;
                 padding: 0;
             }
+
+            & img {
+                height: auto;
+            }
+
         }
 
         & .modal-data {
@@ -137,6 +143,10 @@
             & .modal-data {
                 order: -1;
             }
+        }
+
+        & h2 {
+            width: 80%;
         }
     }
 }
