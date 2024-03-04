@@ -19,7 +19,7 @@ const App = (): React.ReactElement => {
     <Router>
       <Routes>
         <Route path='/' element={
-          <>
+          <React.Fragment>
             <Header />
             <Portfolio />
             <WhatWeDo />
@@ -27,7 +27,7 @@ const App = (): React.ReactElement => {
             <ContactUsSection />
             <Footer />
             <ScrollToTop />
-          </>
+          </React.Fragment>
         } />
         <Route path='/*' element={<Navigate to='/' />} />
       </Routes>
