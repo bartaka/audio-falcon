@@ -1,3 +1,11 @@
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Routes,
+  Route
+} from 'react-router-dom';
+
 import Header from './components/layout/Header';
 import Portfolio from './components/portfolio/Portfolio';
 import WhatWeDo from './components/whatWeDo/WhatWeDo';
@@ -8,15 +16,22 @@ import ScrollToTop from './components/buttons/ScrollToTop';
 
 const App = (): React.ReactElement => {
   return (
-    <>
-      <Header />
-      <Portfolio />
-      <WhatWeDo />
-      <AboutUs />
-      <ContactUsSection />
-      <Footer />
-      <ScrollToTop />
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={
+          <React.Fragment>
+            <Header />
+            <Portfolio />
+            <WhatWeDo />
+            <AboutUs />
+            <ContactUsSection />
+            <Footer />
+            <ScrollToTop />
+          </React.Fragment>
+        } />
+        <Route path='/*' element={<Navigate to='/' />} />
+      </Routes>
+    </Router>
   );
 };
 
