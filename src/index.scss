@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Aku & Kamu";
-  src: local('AkuKamu'), url(./fonts/AkuKamu.woff2) format('woff2');
+  font-family: "League Gothic";
+  src: local('LeagueGothic'), url(./fonts/LeagueGothic-Regular-VariableFont_wdth.ttf);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200;600&display=swap');
@@ -17,7 +17,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 3rem 0 0 0;
-  font-family: 'Aku & Kamu';
+  font-family: 'League Gothic', sans-serif;
   font-size: 1.6rem;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;

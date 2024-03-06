@@ -20,13 +20,15 @@
     }
 
     & h3 {
-        color: $text-yellow;
+        color: $text-color-secondary;
+        text-transform: uppercase;
         font-size: 2rem;
         margin-block-start: 0;
     }
 
     & h4 {
-        color: $text-grey;
+        color: $text-color-grey;
+        text-transform: capitalize;
         margin-top: -2rem;
     }
 
@@ -37,7 +39,7 @@
 }
 
 .highlight {
-    color: $text-yellow;
+    color: $text-color-secondary;
 }
 
 // Mobile

@@ -78,7 +78,7 @@
 
                 & a {
                     text-decoration: none;
-                    color: $text-grey;
+                    color: $text-color-grey;
 
                     &:hover {
                         color: $text-color-main;
@@ -86,7 +86,7 @@
                 }
 
                 & .description-term {
-                    font-family: 'Aku & Kamu';
+                    font-family: 'League Gothic';
                     font-weight: 100;
                 }
             }

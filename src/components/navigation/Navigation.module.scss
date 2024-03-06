@@ -10,14 +10,15 @@
   }
 
   & ul li {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 3rem;
     transition: all .4s;
   }
 
   & ul li a {
-    opacity: 0.8;
+    opacity: 0.85;
     text-decoration: none;
+    text-transform: uppercase;
     color: inherit;
     transition: all 0.4s;
     cursor: pointer;
