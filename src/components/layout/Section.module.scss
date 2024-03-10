@@ -8,13 +8,15 @@
         text-align: center;
 
         & h2 {
+            font-size: 3.5rem;
             border-bottom: 1px solid #e1e1e1;
             text-transform: uppercase;
         }
 
         & h3 {
-            font-family: 'Catamaran';
             font-weight: 100;
+            margin-top: -2.5rem;
+            text-transform: uppercase;
         }
     }
 }

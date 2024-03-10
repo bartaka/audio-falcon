@@ -30,7 +30,7 @@
 
         & h4,
         p {
-            font-family: 'Catamaran', sans-serif;
+            font-family: 'Am Sans', sans-serif;
             text-transform: capitalize;
         }
 
@@ -38,7 +38,8 @@
         & p,
         & h3 {
             opacity: 0;
-            transform: translateY(20px);
+            width: 70%;
+            margin: 2rem auto 0 auto;
             transition: opacity .3s ease-in-out, transform .3s ease-in-out;
         }
 
@@ -48,7 +49,10 @@
             & p,
             & h3 {
                 opacity: 1;
-                transform: translateY(0);
+            }
+
+            & h3 {
+                text-transform: uppercase;
             }
         }
     }

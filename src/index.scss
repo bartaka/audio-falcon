@@ -3,6 +3,11 @@
   src: local('LeagueGothic'), url(./fonts/LeagueGothic-Regular-VariableFont_wdth.ttf);
 }
 
+@font-face {
+  font-family: "Am Sans";
+  src: local('AMSANSR'), url(./fonts/AMSANSR.otf);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200;600&display=swap');
 
 @import '../src/scss/variables.scss';
