@@ -7,7 +7,7 @@ import ButtonPrimary from '../buttons/ButtonPrimary';
 const ContactUsForm = (): React.ReactElement => {
     const form = useRef<HTMLFormElement>(null);
 
-    const [btnText, setBtnText] = useState('send');
+    const [btnText, setBtnText] = useState('send message');
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();

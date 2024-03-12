@@ -1,7 +1,7 @@
 .navigation {
   position: absolute;
   z-index: 100;
-  top: 3rem;
+  top: 0;
   left: 4.5rem;
 
   & ul {
@@ -53,5 +53,17 @@
       width: 18rem;
       margin-bottom: 2rem;
     }
+  }
+}
+
+// big screen
+@media (min-width: 1920px) {
+  .navigation ul li {
+    font-size: 4rem;
+  }
+
+  .logo {
+    width: 28rem;
+    margin-bottom: 19rem;
   }
 }

@@ -4,7 +4,6 @@
   width: 80%;
   margin: 0 auto;
   display: flex;
-  align-items: flex-start;
 
   & img {
     max-width: 40%;
@@ -24,7 +23,7 @@
     }
 
     & p a {
-      color: $text-color-secondary;
+      color: $text-color-main;
     }
 
     & p .highlight {
@@ -33,23 +32,6 @@
       color: $text-color-white;
     }
 
-  }
-
-  & button {
-    width: 25rem;
-    padding: 1rem 0;
-    color: $text-color-secondary;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    background-color: $bg-color-main;
-    border: 2px solid $text-color-secondary;
-    border-radius: 5px;
-    transition: all .5s;
-    cursor: pointer;
-
-    &::first-letter {
-      text-transform: capitalize;
-    }
   }
 }
 

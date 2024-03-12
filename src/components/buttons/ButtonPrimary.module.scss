@@ -1,11 +1,14 @@
 @import '../../scss/variables.scss';
 
 .btn {
-    width: 25rem;
-    padding: 1rem 0;
+    padding: .65rem 1.5rem;
     color: $text-color-white;
+    font-size: 2rem;
+    letter-spacing: 1px;
     font-family: 'League Gothic', sans-serif;
     background-color: $text-color-secondary;
-    border-radius: 0;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
 }

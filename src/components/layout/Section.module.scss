@@ -8,18 +8,23 @@
         margin: 4rem auto;
         width: 20%;
         text-align: center;
+        line-height: 1;
 
         & h2 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: $text-color-white;
             border-bottom: 1px solid $text-color-white;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0;
         }
 
         & h3 {
+            font-size: 1.1rem;
             font-weight: 100;
-            margin-top: -2.5rem;
+            margin-top: 4px;
             text-transform: uppercase;
+            letter-spacing: 5px;
         }
     }
 }
