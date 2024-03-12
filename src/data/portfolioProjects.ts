@@ -37,7 +37,7 @@ export const projectsData: ProjectData[] = [
         video: 'https://www.youtube.com/watch?v=t-7ZVClQDjw'
     },
     {
-        id: 3,
+        id: 2,
         projectName: 'Vivat Slovakia',
         projectType: 'video game',
         role: 'Sound Design, Audio and Music Implementation, Voice Acting, Mix',
@@ -50,7 +50,7 @@ export const projectsData: ProjectData[] = [
         video: 'https://www.youtube.com/watch?v=JjHSFntLN-c'
     },
     {
-        id: 4,
+        id: 3,
         projectName: 'ONEMANSHOW: The Movie',
         projectType: 'film',
         role: 'Dialog Edit, SFX Edit',
@@ -63,7 +63,7 @@ export const projectsData: ProjectData[] = [
         video: 'https://www.youtube.com/watch?v=PV3Q8BZmq7s'
     },
     {
-        id: 5,
+        id: 4,
         projectName: 'Volha',
         projectType: 'TV Series',
         role: 'Dialog Edit',
@@ -76,7 +76,7 @@ export const projectsData: ProjectData[] = [
         video: 'https://www.youtube.com/watch?v=Lri5Lv21G44'
     },
     {
-        id: 6,
+        id: 5,
         projectName: 'Guillermo del Toro\'s Cabinet of Curiosities',
         projectType: 'TV Series',
         role: 'Dubbing Edit and Mix',
@@ -89,8 +89,8 @@ export const projectsData: ProjectData[] = [
         video: 'https://www.youtube.com/watch?v=E3E1URhCR60'
     },
     {
-        id: 7,
-        projectName: 'Mlcet jako hrob (Hushed Up)',
+        id: 6,
+        projectName: 'Mlčet jako hrob (Hushed Up)',
         projectType: 'Audiobook (Czech)',
         role: 'Recording, Edit, Mix',
         imgSrc: img7,
@@ -102,8 +102,8 @@ export const projectsData: ProjectData[] = [
         video: ''
     },
     {
-        id: 8,
-        projectName: 'Merry Christmas CVUT',
+        id: 7,
+        projectName: 'Merry Christmas ČVUT',
         projectType: 'spot',
         role: 'SFX Edit, Mix',
         imgSrc: img8,
@@ -114,7 +114,7 @@ export const projectsData: ProjectData[] = [
         video: 'https://www.youtube.com/watch?v=wiE7GfN358s'
     },
     {
-        id: 9,
+        id: 8,
         projectName: 'Repulse',
         projectType: 'film',
         role: 'SFX Edit',

@@ -1,23 +1,14 @@
 @import '../../scss/variables.scss';
 
 .btn {
-    width: 25rem;
-    padding: 1rem 0;
-    color: $text-yellow;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    background-color: $bg-color-main;
-    border: 2px solid $text-yellow;
+    padding: .65rem 1.5rem;
+    color: $text-color-white;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-family: 'League Gothic', sans-serif;
+    background-color: $text-color-secondary;
+    border: none;
     border-radius: 5px;
-    transition: all .5s;
     cursor: pointer;
-
-    &::first-letter {
-        text-transform: capitalize;
-    }
-
-    &:hover {
-        color: $bg-color-main;
-        background-color: $text-yellow;
-    }
+    text-transform: uppercase;
 }

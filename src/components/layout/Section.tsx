@@ -4,15 +4,18 @@ type Props = {
     sectionId: string;
     heading: string;
     subheading?: string;
+    backgroundGradient?: boolean;
     children: React.ReactNode;
 };
 
 const Section = (props: Props): React.ReactElement => {
-    const { sectionId, heading, subheading, children } = props;
+    const { sectionId, heading, subheading, backgroundGradient = false, children } = props;
+
+    const sectionStyles = `${styles.section} ${backgroundGradient ? styles.gradient : ''}`;
 
     return (
         <section
-            className={styles.section}
+            className={sectionStyles}
             id={sectionId}
         >
             <div className={styles['section-heading']}>

@@ -4,51 +4,34 @@
   width: 80%;
   margin: 0 auto;
   display: flex;
-  align-items: flex-start;
 
   & img {
-    max-width: 55%;
+    max-width: 40%;
   }
 
   & .text {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'Am Sans', sans-serif;
+    line-height: 1.5;
     margin-left: 2rem;
 
     & h3 {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      color: $text-color-white;
+      font-weight: 100;
       margin-block-start: 0;
-
-      &::first-letter {
-        text-transform: capitalize;
-      }
+      text-transform: uppercase;
     }
 
     & p a {
-      color: inherit;
+      color: $text-color-main;
     }
 
-    & p .bold {
-      font-weight: 800;
-      font-size: 1.7rem;
+    & p .highlight {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $text-color-white;
     }
 
-  }
-
-  & button {
-    width: 25rem;
-    padding: 1rem 0;
-    color: $text-yellow;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    background-color: $bg-color-main;
-    border: 2px solid $text-yellow;
-    border-radius: 5px;
-    transition: all .5s;
-    cursor: pointer;
-
-    &::first-letter {
-      text-transform: capitalize;
-    }
   }
 }
 
