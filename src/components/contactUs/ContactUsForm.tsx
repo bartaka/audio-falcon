@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { ScaleLoader } from 'react-spinners';
 
 import styles from './ContactUsForm.module.scss';
 import ButtonPrimary from '../buttons/ButtonPrimary';
@@ -8,9 +9,12 @@ const ContactUsForm = (): React.ReactElement => {
     const form = useRef<HTMLFormElement>(null);
 
     const [btnText, setBtnText] = useState('send message');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        setIsLoading(true);
 
         const serviceId = import.meta.env.VITE_SERVICE_ID;
         const templateId = import.meta.env.VITE_TEMPLATE_ID;
@@ -33,9 +37,11 @@ const ContactUsForm = (): React.ReactElement => {
             if (form.current) {
                 form.current.reset();
             }
+            setIsLoading(false);
             setBtnText('message sent, thank you!');
             console.log(result.text);
         }, (error) => {
+            setIsLoading(false);
             setBtnText('❗️ server error, please try again');
             console.log(error.text);
         });
@@ -85,7 +91,12 @@ const ContactUsForm = (): React.ReactElement => {
                     required
                 ></textarea>
             </div>
-            <ButtonPrimary btnType='submit' text={btnText} />
+            <ButtonPrimary btnType='submit'>
+                {isLoading
+                    ? <ScaleLoader height='1rem' />
+                    : btnText
+                }
+            </ButtonPrimary>
         </form>
     );
 };

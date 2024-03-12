@@ -10,6 +10,7 @@ const WhatWeDo = (): React.ReactElement => {
             sectionId='what-we-do'
             heading='services'
             subheading='what we do'
+            backgroundGradient
         >
             <div className={styles.container}>
                 {data.map(activity => (

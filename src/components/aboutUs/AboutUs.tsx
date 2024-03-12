@@ -8,6 +8,7 @@ const AboutUs = (): React.ReactElement => {
         <Section
             sectionId='about-us'
             heading='About us'
+            backgroundGradient
         >
             <div className={styles.container}>
                 <img src={image} alt='Luky & Bara' />

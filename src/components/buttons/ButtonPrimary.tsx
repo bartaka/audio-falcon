@@ -2,18 +2,18 @@ import styles from './ButtonPrimary.module.scss';
 
 type Props = {
     btnType: 'button' | 'submit';
-    text: string;
+    children: React.ReactNode
 };
 
 const ButtonPrimary = (props: Props): React.ReactElement => {
-    const { btnType, text } = props;
+    const { btnType, children } = props;
 
     return (
         <button
             className={styles.btn}
             type={btnType}
         >
-            {text}
+            {children}
         </button>
     );
 };

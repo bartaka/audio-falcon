@@ -9,6 +9,7 @@ const Portfolio = (): React.ReactElement => {
             sectionId='portfolio'
             heading='portfolio'
             subheading='latest projects'
+            backgroundGradient
         >
             <div className={styles['tiles-container']}>
                 {data.map(project => (

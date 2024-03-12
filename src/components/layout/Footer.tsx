@@ -6,14 +6,9 @@ const Footer = (): React.ReactElement => {
 
   return (
     <footer className={classes.footer}>
-      <div>
-        <img src={logo} alt='Audio Falcon logo' width='50px' />
-        <p>&copy; Audio Falcon {currentYear}</p>
-      </div>
-      <div>
-        <p>additional links?</p>
-      </div>
-    </footer>
+      <img src={logo} alt='Audio Falcon logo' width='50px' />
+      <p>&copy; Audio Falcon {currentYear}</p>
+    </footer >
   );
 };
 

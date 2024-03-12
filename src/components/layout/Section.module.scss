@@ -1,5 +1,16 @@
 @import '../../scss/variables.scss';
 
+.gradient {
+    background: -webkit-linear-gradient(180deg,
+            $bg-color-main,
+            #141414,
+            $bg-color-main);
+    background: linear-gradient(180deg,
+            $bg-color-main,
+            #141414,
+            $bg-color-main);
+}
+
 .section {
     margin: 15rem 0;
 
