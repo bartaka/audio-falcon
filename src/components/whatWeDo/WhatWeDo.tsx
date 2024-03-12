@@ -8,7 +8,8 @@ const WhatWeDo = (): React.ReactElement => {
     return (
         <Section
             sectionId='what-we-do'
-            heading='what we do'
+            heading='services'
+            subheading='what we do'
         >
             <div className={styles.container}>
                 {data.map(activity => (
