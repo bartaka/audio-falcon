@@ -1,5 +1,4 @@
 import styles from './AboutUs.module.scss';
-import ButtonPrimary from '../buttons/ButtonPrimary';
 import Section from '../layout/Section';
 import image from '../../assets/aboutUs/about-us.jpg';
 

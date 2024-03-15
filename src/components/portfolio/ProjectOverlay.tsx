@@ -2,6 +2,7 @@ import React, { MouseEventHandler, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 import styles from './ProjectOverlay.module.scss';
+import { truncate } from '../../utils/Strings';
 
 type Props = {
     title: string;
@@ -78,7 +79,15 @@ const ProjectOverlay = (props: Props): React.ReactElement => {
                                 </p>
                             }
                             <p>
-                                <span className={styles['description-term']}>WEB:</span> <a href={web} target='_blank' rel='noreferrer'>{web}</a>
+                                <span className={styles['description-term']}>WEB:</span>
+                                {' '}
+                                <a
+                                    href={web}
+                                    target='_blank'
+                                    rel='noreferrer'
+                                >
+                                    {truncate(web, 41)}
+                                </a>
                             </p>
                             {note &&
                                 <p
