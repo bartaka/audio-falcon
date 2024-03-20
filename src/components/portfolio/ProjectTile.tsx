@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import styles from './ProjectTile.module.scss';
 import ProjectOverlay from './ProjectOverlay';
@@ -32,16 +32,14 @@ const ProjectTile = (props: Props): React.ReactElement => {
         video = ''
     } = props;
 
-    const [tileOverlayed, setTileOverlayed] = useState(false);
+    const tileRef = useRef(null);
     const [overlayDisplayed, setOverlayDisplayed] = useState(false);
 
-    const handleMouseOver = () => setTileOverlayed(true);
-    const handleMouseOut = () => setTileOverlayed(false);
     const handleTileClicked = () => setOverlayDisplayed(true);
     const handleClose = () => setOverlayDisplayed(false);
 
     return (
-        <>
+        <React.Fragment>
             {overlayDisplayed &&
                 <ProjectOverlay
                     title={title}
@@ -56,24 +54,18 @@ const ProjectTile = (props: Props): React.ReactElement => {
                     onClose={handleClose}
                 />}
             <div
+                ref={tileRef}
                 className={styles.tile}
-                onMouseOver={handleMouseOver}
-                onMouseOut={handleMouseOut}
                 onClick={handleTileClicked}
             >
                 <img src={imgSrc} alt={imgAlt} />
-
-                {tileOverlayed && (
-                    <div className={styles['overlay-wrapper']}>
-                        <div className={styles.overlay}>
-                            <h4>{type}</h4>
-                            <p>{role}</p>
-                            <h3>{title}</h3>
-                        </div>
-                    </div>
-                )}
+                <div className={styles['tile-details']}>
+                    <h4>{type}</h4>
+                    <p>{role}</p>
+                    <h3>{title}</h3>
+                </div>
             </div>
-        </>
+        </React.Fragment>
     );
 };
 
