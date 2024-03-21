@@ -1,3 +1,5 @@
+import { Fade } from 'react-awesome-reveal';
+
 import styles from './Section.module.scss';
 
 type Props = {
@@ -14,17 +16,29 @@ const Section = (props: Props): React.ReactElement => {
     const sectionStyles = `${styles.section} ${backgroundGradient ? styles.gradient : ''}`;
 
     return (
-        <section
-            className={sectionStyles}
-            id={sectionId}
+        <Fade
+            duration={1500}
+            delay={200}
+            triggerOnce
         >
-            <div className={styles['section-heading']}>
-                <h2>{heading}</h2>
-                {subheading &&
-                    <h3>{subheading}</h3>}
-            </div>
-            {children}
-        </section>
+            <section
+                className={sectionStyles}
+                id={sectionId}
+            >
+                <div className={styles['section-heading']}>
+                    <h2>{heading}</h2>
+                    {subheading &&
+                        <h3>{subheading}</h3>}
+                </div>
+                <Fade
+                    delay={500}
+                    duration={1500}
+                    triggerOnce
+                >
+                    {children}
+                </Fade>
+            </section>
+        </Fade>
     );
 };
 

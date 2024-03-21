@@ -57,3 +57,22 @@
         opacity: 1;
     }
 }
+
+@media (min-width: 1920px) {
+    .tile {
+        & .tile-details {
+            & h4 {
+                font-size: 2rem;
+            }
+
+            & p {
+                font-size: 1.5rem;
+            }
+
+            & h3 {
+                font-size: 3rem;
+                margin-top: 6rem;
+            }
+        }
+    }
+}

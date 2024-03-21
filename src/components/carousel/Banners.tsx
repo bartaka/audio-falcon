@@ -32,8 +32,9 @@ const Banners = (): React.ReactElement => {
       autoPlay
       infiniteLoop
       interval={5000}
-      transitionTime={1500}
+      transitionTime={2500}
       animationHandler='fade'
+      stopOnHover={false}
       showArrows={false}
       showIndicators={false}
       showStatus={false}
