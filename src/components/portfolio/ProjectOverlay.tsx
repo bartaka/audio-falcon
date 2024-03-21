@@ -37,10 +37,13 @@ const ProjectOverlay = (props: Props): React.ReactElement => {
     if (!backdropRoot || !modalRoot) throw new Error('Required root elements not found');
 
     useEffect(() => {
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
         document.body.style.overflow = 'hidden';
 
         return () => {
             document.body.style.overflow = 'auto';
+            document.body.style.paddingRight = '';
         };
     }, []);
 
