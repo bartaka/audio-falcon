@@ -25,8 +25,8 @@ const Navigation = (): React.ReactElement => {
                     <li key={entry.link}>
                         <Link
                             to={entry.url}
-                            smooth
-                            duration={1000}
+                            smooth='easeOutQuint'
+                            duration={3000}
                             offset={-10}
                         >
                             {entry.link}
