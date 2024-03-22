@@ -1,20 +1,20 @@
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import banner1desktop from '../../assets/carousel/AF-banner04-Van-Breaking.jpg';
-import banner1mobile from '../../assets/carousel/AF-banner04-Van-Breaking-mob.jpg';
-import banner2desktop from '../../assets/carousel/AF-banner07-SaltAndPepper.jpg';
-import banner2mobile from '../../assets/carousel/AF-banner07-SaltAndPepper-mob.jpg';
-import banner3desktop from '../../assets/carousel/AF-banner05-Tree-Ears.jpg';
-import banner3mobile from '../../assets/carousel/AF-banner05-Tree-Ears-mob.jpg';
-import banner4desktop from '../../assets/carousel/AF-banner01-Strazov-Meadow.jpg';
-import banner4mobile from '../../assets/carousel/AF-banner01-Strazov-Meadow-mob.jpg';
-import banner5desktop from '../../assets/carousel/AF-banner03-Tree-Ears-Tatry.jpg';
-import banner5mobile from '../../assets/carousel/AF-banner03-Tree-Ears-Tatry-mob.jpg';
-import banner6desktop from '../../assets/carousel/AF-banner06-Strazov-Skoda125.jpg';
-import banner6mobile from '../../assets/carousel/AF-banner06-Strazov-Skoda125-mob.jpg';
-import banner7desktop from '../../assets/carousel/AF-banner02-Skalnate-Pleso.jpg';
-import banner7mobile from '../../assets/carousel/AF-banner02-Skalnate-Pleso-mob.jpg';
+import banner1desktop from '../../assets/carousel/AF-banner-Van-Breaking.jpg';
+import banner1mobile from '../../assets/carousel/AF-banner-Van-Breaking-mob.jpg';
+import banner2desktop from '../../assets/carousel/AF-banner-SaltAndPepper.jpg';
+import banner2mobile from '../../assets/carousel/AF-banner-SaltAndPepper-mob.jpg';
+import banner3desktop from '../../assets/carousel/AF-banner-Tree-Ears.jpg';
+import banner3mobile from '../../assets/carousel/AF-banner-Tree-Ears-mob.jpg';
+import banner4desktop from '../../assets/carousel/AF-banner-Strazov-Meadow.jpg';
+import banner4mobile from '../../assets/carousel/AF-banner-Strazov-Meadow-mob.jpg';
+import banner5desktop from '../../assets/carousel/AF-banner-Tree-Ears-Tatry.jpg';
+import banner5mobile from '../../assets/carousel/AF-banner-Tree-Ears-Tatry-mob.jpg';
+import banner6desktop from '../../assets/carousel/AF-banner-Strazov-Skoda125.jpg';
+import banner6mobile from '../../assets/carousel/AF-banner-Strazov-Skoda125-mob.jpg';
+import banner7desktop from '../../assets/carousel/AF-banner-Skalnate-Pleso.jpg';
+import banner7mobile from '../../assets/carousel/AF-banner-Skalnate-Pleso-mob.jpg';
 
 const banners = [
   { desk: banner1desktop, mob: banner1mobile, alt: 'Van Breaking' },
@@ -32,8 +32,9 @@ const Banners = (): React.ReactElement => {
       autoPlay
       infiniteLoop
       interval={5000}
-      transitionTime={1500}
+      transitionTime={2500}
       animationHandler='fade'
+      stopOnHover={false}
       showArrows={false}
       showIndicators={false}
       showStatus={false}

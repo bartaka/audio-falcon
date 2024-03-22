@@ -8,8 +8,6 @@
   src: local('AMSANSR'), url(./fonts/AMSANSR.otf);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200;600&display=swap');
-
 @import '../src/scss/variables.scss';
 
 html {
@@ -27,4 +25,9 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  color: $text-color-main;
+  background-color: $text-color-secondary;
 }

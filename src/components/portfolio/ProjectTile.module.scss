@@ -1,62 +1,89 @@
-.overlay-wrapper {
-    position: absolute;
-    top: -3px;
-    left: -3px;
-    width: calc(100% + 5px);
-    height: calc(100% + 5px);
-    backdrop-filter: blur(0px) brightness(100%);
-    transition: backdrop-filter .3s ease-in-out;
-
-    &:hover {
-        backdrop-filter: blur(3px) brightness(50%);
-    }
-}
-
 .tile {
+    overflow: hidden;
+    cursor: pointer;
     position: relative;
-    transition: backdrop-filter .3s;
-
-    & h3 {
-        font-size: 2rem;
-    }
 
     & img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        transition: transform .3s ease-out;
     }
 
-    & .overlay {
-        position: relative;
+    & .tile-details {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         text-align: center;
-        cursor: pointer;
+        backdrop-filter: blur(3px) brightness(.5);
+        padding: .5rem;
+        opacity: 0;
+        transition: opacity .3s;
+
+        & h4 {
+            margin-bottom: -2rem;
+            text-transform: capitalize;
+            font-size: 1.8rem;
+        }
 
         & h4,
         p {
-            font-family: 'Am Sans', sans-serif;
-            text-transform: capitalize;
+            font-family: 'Am Sans';
         }
 
-        & h4,
-        & p,
+        & p {
+            font-size: 1.2rem;
+            line-height: 1;
+            width: 60%;
+            margin: 1.5rem auto 0 auto;
+        }
+
         & h3 {
-            opacity: 0;
-            width: 70%;
-            margin: 2rem auto 0 auto;
-            transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+            margin: 5rem auto 0 auto;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            width: 80%;
+            line-height: 1;
         }
+    }
 
-        &:hover {
+    &:hover img {
+        transform: scale(1.03);
+    }
 
-            & h4,
-            & p,
+    &:hover .tile-details {
+        opacity: 1;
+    }
+}
+
+// mobile
+@media (max-width: 767px) {
+    .tile {
+        & .tile-details {
             & h3 {
-                opacity: 1;
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+// big screens
+@media (min-width: 1920px) {
+    .tile {
+        & .tile-details {
+            & h4 {
+                font-size: 2rem;
+            }
+
+            & p {
+                font-size: 1.5rem;
             }
 
             & h3 {
-                text-transform: uppercase;
+                font-size: 3rem;
+                margin-top: 6rem;
             }
         }
     }

@@ -8,6 +8,7 @@ const Footer = (): React.ReactElement => {
     <footer className={classes.footer}>
       <img src={logo} alt='Audio Falcon logo' width='50px' />
       <p>&copy; Audio Falcon {currentYear}</p>
+      {/* <p className={classes.credit}>site by <a href='#'>bartaka</a></p> */}
     </footer >
   );
 };

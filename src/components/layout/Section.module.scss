@@ -47,6 +47,10 @@
 
         & .section-heading {
             width: 50%;
+
+            & h2 {
+                font-weight: 200;
+            }
         }
     }
 }

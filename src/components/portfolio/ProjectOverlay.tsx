@@ -2,6 +2,7 @@ import React, { MouseEventHandler, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 import styles from './ProjectOverlay.module.scss';
+import { truncate } from '../../utils/Strings';
 
 type Props = {
     title: string;
@@ -36,10 +37,13 @@ const ProjectOverlay = (props: Props): React.ReactElement => {
     if (!backdropRoot || !modalRoot) throw new Error('Required root elements not found');
 
     useEffect(() => {
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
         document.body.style.overflow = 'hidden';
 
         return () => {
             document.body.style.overflow = 'auto';
+            document.body.style.paddingRight = '';
         };
     }, []);
 
@@ -78,7 +82,15 @@ const ProjectOverlay = (props: Props): React.ReactElement => {
                                 </p>
                             }
                             <p>
-                                <span className={styles['description-term']}>WEB:</span> <a href={web} target='_blank' rel='noreferrer'>{web}</a>
+                                <span className={styles['description-term']}>WEB:</span>
+                                {' '}
+                                <a
+                                    href={web}
+                                    target='_blank'
+                                    rel='noreferrer'
+                                >
+                                    {truncate(web, 41)}
+                                </a>
                             </p>
                             {note &&
                                 <p
