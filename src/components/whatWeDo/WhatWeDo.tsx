@@ -13,7 +13,7 @@ const WhatWeDo = (): React.ReactElement => {
             backgroundGradient
         >
             <div className={styles.container}>
-                {data.map(activity => (
+                {data.map((activity) => (
                     <Activity
                         key={activity.id}
                         imgSrc={activity.imgSrc}

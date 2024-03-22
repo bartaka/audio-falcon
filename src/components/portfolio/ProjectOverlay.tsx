@@ -34,7 +34,9 @@ const ProjectOverlay = (props: Props): React.ReactElement => {
     const backdropRoot = document.getElementById('backdrop-root');
     const modalRoot = document.getElementById('modal-root');
 
-    if (!backdropRoot || !modalRoot) throw new Error('Required root elements not found');
+    if (!backdropRoot || !modalRoot) {
+        throw new Error('Required root elements not found');
+    }
 
     useEffect(() => {
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
@@ -59,7 +61,8 @@ const ProjectOverlay = (props: Props): React.ReactElement => {
                     <h2>{title}</h2>
                     <div className={styles['modal-content']}>
                         <div className={styles['modal-vid']}>
-                            {video ?
+                            {video
+                                ?
                                 <iframe
                                     id='inlineFrame'
                                     title='Inline Frame'

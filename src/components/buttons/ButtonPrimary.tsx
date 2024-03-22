@@ -2,7 +2,7 @@ import styles from './ButtonPrimary.module.scss';
 
 type Props = {
     btnType: 'button' | 'submit';
-    children: React.ReactNode
+    children: React.ReactNode;
 };
 
 const ButtonPrimary = (props: Props): React.ReactElement => {

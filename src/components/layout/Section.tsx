@@ -11,9 +11,19 @@ type Props = {
 };
 
 const Section = (props: Props): React.ReactElement => {
-    const { sectionId, heading, subheading, backgroundGradient = false, children } = props;
+    const {
+        sectionId,
+        heading,
+        subheading,
+        backgroundGradient = false,
+        children
+    } = props;
 
-    const sectionStyles = `${styles.section} ${backgroundGradient ? styles.gradient : ''}`;
+    const sectionStyles = `
+        ${styles.section} ${backgroundGradient
+            ? styles.gradient
+            : ''}
+    `;
 
     return (
         <Fade

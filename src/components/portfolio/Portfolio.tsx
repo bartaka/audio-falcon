@@ -12,7 +12,7 @@ const Portfolio = (): React.ReactElement => {
             backgroundGradient
         >
             <div className={styles['tiles-container']}>
-                {data.map(project => (
+                {data.map((project) => (
                     <ProjectTile
                         imgSrc={project.imgSrc}
                         imgAlt={project.imgAlt}

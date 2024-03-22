@@ -23,14 +23,39 @@ const Activity = (props: Props): React.ReactElement => {
                 <h3>{h3}</h3>
                 <h4>{h4}</h4>
                 <p dangerouslySetInnerHTML={{
-                    __html: p.replace('FMOD and Wwise', `<span class="${styles['highlight']}">FMOD and Wwise</span>`)
-                        .replace('Unity or Unreal Engine', `<span class="${styles['highlight']}">Unity or Unreal Engine</span>`)
-                        .replace('surround ambiences', `<span class="${styles['highlight']}">surround ambiences</span>`)
-                        .replace('cinematic impacts', `<span class="${styles['highlight']}">cinematic impacts</span>`)
-                        .replace('documentary series', `<span class="${styles['highlight']}">documentary series</span>`)
-                        .replace('smaller film productions', `<span class="${styles['highlight']}">smaller film productions</span>`)
-                        .replace('sound design, edit, voice recording', `<span class="${styles['highlight']}">sound design, edit, voice recording</span>`)
-                        .replace('final mix', `<span class="${styles['highlight']}">final mix</span>`)
+                    __html: p
+                        .replace(
+                            'FMOD and Wwise',
+                            `<span class="${styles['highlight']}">FMOD and Wwise</span>`
+                        )
+                        .replace(
+                            'Unity or Unreal Engine',
+                            `<span class="${styles['highlight']}">Unity or Unreal Engine</span>`
+                        )
+                        .replace(
+                            'surround ambiences',
+                            `<span class="${styles['highlight']}">surround ambiences</span>`
+                        )
+                        .replace(
+                            'cinematic impacts',
+                            `<span class="${styles['highlight']}">cinematic impacts</span>`
+                        )
+                        .replace(
+                            'documentary series',
+                            `<span class="${styles['highlight']}">documentary series</span>`
+                        )
+                        .replace(
+                            'smaller film productions',
+                            `<span class="${styles['highlight']}">smaller film productions</span>`
+                        )
+                        .replace(
+                            'sound design, edit, voice recording',
+                            `<span class="${styles['highlight']}">sound design, edit, voice recording</span>`
+                        )
+                        .replace(
+                            'final mix',
+                            `<span class="${styles['highlight']}">final mix</span>`
+                        )
                 }}>
                 </p>
             </div>
