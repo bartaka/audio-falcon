@@ -1,6 +1,6 @@
 /**
  * Truncates a string past the specified length, replaces the rest with '...'
- * @param {string} str The string to be evaulated and truncated
+ * @param {string} str The string to be evaluated and truncated
  * @param {number} num Length of string past which to truncate
  * @returns {string} Truncated string
  */

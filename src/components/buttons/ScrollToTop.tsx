@@ -5,6 +5,7 @@ import styles from './ScrollToTop.module.scss';
 
 const ScrollToTop = (): React.ReactElement => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     const goToTopHandler = (): void => {
         window.scrollTo({
@@ -14,6 +15,10 @@ const ScrollToTop = (): React.ReactElement => {
     };
 
     useEffect(() => {
+        if (window.innerWidth <= 768) {
+            setIsMobile(true);
+        }
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
                 setIsVisible(true);
@@ -24,7 +29,11 @@ const ScrollToTop = (): React.ReactElement => {
     return (
         <button
             className={styles['scroll-to-top-btn']}
-            style={{ display: isVisible ? 'block' : 'none' }}
+            style={{
+                display: (isVisible && !isMobile)
+                    ? 'block'
+                    : 'none'
+            }}
             onClick={goToTopHandler}
         >
             <FaArrowUp className={styles.arrow} />
