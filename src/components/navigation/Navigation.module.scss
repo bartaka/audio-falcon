@@ -45,8 +45,8 @@
     left: 1rem;
 
     & ul li {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
     }
 
     .logo {
@@ -59,7 +59,7 @@
 // big screen
 @media (min-width: 1920px) {
   .navigation ul li {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .logo {

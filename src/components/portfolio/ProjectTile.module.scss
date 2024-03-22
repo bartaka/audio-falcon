@@ -58,6 +58,18 @@
     }
 }
 
+// mobile
+@media (max-width: 767px) {
+    .tile {
+        & .tile-details {
+            & h3 {
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+// big screens
 @media (min-width: 1920px) {
     .tile {
         & .tile-details {
