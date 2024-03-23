@@ -73,7 +73,7 @@ export const projectsData: ProjectData[] = [
         web: 'https://www.imdb.com/title/tt27259817/',
         note: 'Post-Production was done in Studio Beep.',
         description: 'Standa Pekárek finishes compulsory military service and becomes a chauffeur at communist Czech TV in 1971 dreaming of his own Volga (Volha). Willing to do anything to fulfill his dream he agrees to be a spy under code-name Volha.',
-        video: 'https://www.youtube.com/watch?v=Lri5Lv21G44'
+        video: 'https://www.youtube.com/watch?v=WP5kcJoo-nA'
     },
     {
         id: 5,
@@ -86,7 +86,7 @@ export const projectsData: ProjectData[] = [
         web: 'https://www.imdb.com/title/tt8415836/?ref_=fn_al_tt_1',
         note: 'Post-Production was done in Studio Beep.',
         description: 'Cabinet of Curioisites is a horror anthology streaming television series created by Guillermo del Toro for Netflix. It features eight modern horror stories in the traditions of the Gothic and Grand Guignol genres.',
-        video: 'https://www.youtube.com/watch?v=E3E1URhCR60'
+        video: 'https://www.youtube.com/watch?v=k0C8X73JS-s'
     },
     {
         id: 6,
@@ -124,6 +124,6 @@ export const projectsData: ProjectData[] = [
         web: 'https://www.imdb.com/title/tt14188996/',
         note: 'Post-Production was done in Studio Beep.',
         description: 'A dark drama starring an unexpectedly maniacal Stepán Kozub and an unstable heroine played by Pavla Gajdosíková.',
-        video: 'https://www.youtube.com/watch?v=t-7ZVClQDjw'
+        video: 'https://www.youtube.com/watch?v=ADTN2XDKA5A'
     }
 ];
