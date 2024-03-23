@@ -15,9 +15,7 @@ const ScrollToTop = (): React.ReactElement => {
     };
 
     useEffect(() => {
-        if (window.innerWidth <= 768) {
-            setIsMobile(true);
-        }
+        if (window.innerWidth <= 768) setIsMobile(true);
 
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
