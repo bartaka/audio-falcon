@@ -1,3 +1,10 @@
 .header {
-    min-height: 90vh;
+  min-height: 90vh;
+}
+
+// mobile
+@media (max-width: 767px) {
+  .header {
+    min-height: 50vh;
+  }
 }
