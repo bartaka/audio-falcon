@@ -73,7 +73,7 @@ export const projectsData: ProjectData[] = [
         web: 'https://www.imdb.com/title/tt27259817/',
         note: 'Post-Production was done in Studio Beep.',
         description: 'Standa Pekárek finishes compulsory military service and becomes a chauffeur at communist Czech TV in 1971 dreaming of his own Volga (Volha). Willing to do anything to fulfill his dream he agrees to be a spy under code-name Volha.',
-        video: 'https://www.youtube.com/watch?v=WP5kcJoo-nA'
+        video: 'https://www.youtube.com/watch?v=6OjSbentTGE'
     },
     {
         id: 5,
