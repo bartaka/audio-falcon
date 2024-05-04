@@ -1,65 +1,66 @@
 @import '../../scss/variables.scss';
 
 .gradient {
-    background: -webkit-linear-gradient(180deg,
-            $bg-color-main,
-            #141414,
-            $bg-color-main);
-    background: linear-gradient(180deg,
-            $bg-color-main,
-            #141414,
-            $bg-color-main);
+  background: -webkit-linear-gradient(
+    180deg,
+    $bg-color-main,
+    #141414,
+    $bg-color-main
+  );
+  background: linear-gradient(180deg, $bg-color-main, #141414, $bg-color-main);
 }
 
 .section {
-    margin: 15rem 0;
+  margin: 15rem 0 30rem 0;
 
-    & .section-heading {
-        display: block;
-        margin: 4rem auto;
-        width: 20%;
-        text-align: center;
-        line-height: 1;
+  & .section-heading {
+    display: block;
+    margin: 4rem auto;
+    width: 20%;
+    text-align: center;
+    line-height: 1;
 
-        & h2 {
-            font-size: 4rem;
-            color: $text-color-white;
-            border-bottom: 1px solid $text-color-white;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 0;
-        }
-
-        & h3 {
-            font-size: 1.1rem;
-            font-weight: 100;
-            margin-top: 4px;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-        }
+    & h2 {
+      font-size: 4rem;
+      color: $text-color-white;
+      border-bottom: 1px solid $text-color-white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0;
     }
+
+    & h3 {
+      font-size: 1.1rem;
+      font-weight: 100;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+  }
 }
 
 // Mobile
 @media (max-width: 767px) {
-    .section {
-        margin: 10rem 0;
+  .section {
+    margin: 10rem 0;
 
-        & .section-heading {
-            width: 50%;
+    & .section-heading {
+      width: 50%;
 
-            & h2 {
-                font-weight: 200;
-            }
-        }
+      & h2 {
+        font-weight: 200;
+      }
     }
+  }
 }
 
 // Big screen
 @media (min-width: 1920px) {
-    .section {
-        & .section-heading {
-            width: 13%;
-        }
+  .section {
+    margin-bottom: 50rem;
+
+    & .section-heading {
+      width: 13%;
     }
+  }
 }

@@ -29,14 +29,19 @@
     padding: 3rem 3rem 8rem 3rem;
 
     & .close-button {
-        display: none;
         color: $text-color-main;
+        cursor: pointer;
         position: absolute;
         top: 1rem;
         right: 1rem;
         background: transparent;
         border: none;
         font-size: 3rem;
+        transition: all .5s;
+
+        &:hover {
+            transform: scale(1.15);
+        }
     }
 
     & .modal-content {
@@ -135,12 +140,8 @@
 // mobile
 @media (max-width: 768px) {
     .modal {
-        width: 90%;
+        width: 75%;
         padding: 1.5rem;
-
-        & .close-button {
-            display: block;
-        }
 
         & .modal-content {
             flex-direction: column;

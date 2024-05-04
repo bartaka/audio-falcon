@@ -4,38 +4,34 @@ import styles from './Navigation.module.scss';
 import logo from '../../assets/logo/AF_Logo_With name.svg';
 
 const Navigation = (): React.ReactElement => {
-    const navLinks = [
-        { link: 'work', url: 'portfolio' },
-        { link: 'services', url: 'what-we-do' },
-        { link: 'about us', url: 'about-us' },
-        { link: 'contact', url: 'contact' }
-    ];
+  const navLinks = [
+    { link: 'work', url: 'portfolio' },
+    { link: 'services', url: 'what-we-do' },
+    { link: 'about us', url: 'about-us' },
+    { link: 'contact', url: 'contact' },
+  ];
 
-    return (
-        <div className={styles.navigation}>
-            <a href='/'>
-                <img
-                    src={logo}
-                    className={styles.logo}
-                    alt='Audio Falcon logo'
-                />
-            </a>
-            <ul>
-                {navLinks.map(entry => (
-                    <li key={entry.link}>
-                        <Link
-                            to={entry.url}
-                            smooth='easeOutQuint'
-                            duration={3000}
-                            offset={-10}
-                        >
-                            {entry.link}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
+  return (
+    <div className={styles.navigation}>
+      <a href='/'>
+        <img src={logo} className={styles.logo} alt='Audio Falcon logo' />
+      </a>
+      <ul>
+        {navLinks.map((entry) => (
+          <li key={entry.link}>
+            <Link
+              to={entry.url}
+              smooth='easeOutQuint'
+              duration={3000}
+              offset={-80}
+            >
+              {entry.link}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default Navigation;
