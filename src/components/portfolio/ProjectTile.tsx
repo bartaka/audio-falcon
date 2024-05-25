@@ -60,7 +60,7 @@ const ProjectTile = (props: Props): React.ReactElement => {
       >
         <img src={imgSrc} alt={imgAlt} />
         <div className={styles['tile-details']}>
-          <h4>{type}</h4>
+          <h4 className='mt-10'>{type}</h4>
           <p>{role}</p>
           <h3>{title}</h3>
         </div>
