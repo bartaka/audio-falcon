@@ -30,7 +30,7 @@ const Navigation = (): React.ReactElement => {
 
   return (
     <div className={styles.navigation}>
-      <div className='md:hidden bg-black top-0 py-8 px-4 flex justify-between items-center z-50'>
+      <div className='md:hidden bg-black top-0 py-12 px-4 flex justify-between items-center z-50'>
         <button
           type='button'
           onClick={() => setIsOpen(!isOpen)}
