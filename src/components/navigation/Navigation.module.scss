@@ -1,12 +1,12 @@
 .navigation {
   position: absolute;
   z-index: 100;
-  top: 0;
-  left: 4.5rem;
+  top: 5rem;
+  left: 5rem;
 
   & ul {
     list-style-type: none;
-    margin-left: .6rem;
+    margin-left: 4rem;
   }
 
   & ul li {
@@ -35,7 +35,7 @@
 .logo {
   opacity: 0.8;
   width: 24rem;
-  margin-bottom: 6rem;
+  margin-bottom: 14rem;
 }
 
 // mobile
@@ -44,14 +44,15 @@
     font-family: "League Gothic";
     text-transform: uppercase;
     width: 100%;
+    top: 0;
     left: 0;
 
     .mobileLogo {
       width: 7rem;
       position: absolute;
-      top: 50%;
+      top: 1.3rem;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, 0);
     }
   }
 }

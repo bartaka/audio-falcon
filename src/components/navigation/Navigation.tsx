@@ -2,7 +2,7 @@ import { Link } from 'react-scroll';
 import { Transition } from '@headlessui/react';
 import { useEffect, useState, useRef } from 'react';
 import styles from './Navigation.module.scss';
-import logo from '../../assets/logo/AF_Logo_With name.svg';
+import logo from '../../assets/logo/AF_Logo_New.png';
 import logoMobile from '../../assets/logo/AF_Logo_mobile.png';
 
 const Navigation = (): React.ReactElement => {
@@ -76,27 +76,27 @@ const Navigation = (): React.ReactElement => {
 
       <Transition
         show={isOpen}
-        enter="transition ease-out duration-500 transform"
-        enterFrom="-translate-x-full"
-        enterTo="translate-x-0"
-        leave="transition ease-in duration-200 transform"
-        leaveFrom="translate-x-0"
-        leaveTo="-translate-x-full"
+        enter='transition ease-out duration-500 transform'
+        enterFrom='-translate-x-full'
+        enterTo='translate-x-0'
+        leave='transition ease-in duration-200 transform'
+        leaveFrom='translate-x-0'
+        leaveTo='-translate-x-full'
       >
         {() => (
-          <div className="md:hidden top-0 left-0 w-full h-screen z-40 bg-black">
+          <div className='md:hidden top-0 left-0 w-full h-screen z-40 bg-black'>
             <div
               ref={sidebarRef}
-              className="px-2 pt-24 pb-10 space-y-8 sm:px-3 h-screen overflow-y-auto"
+              className='px-2 pt-24 pb-10 space-y-8 sm:px-3 h-screen overflow-y-auto'
             >
               {navLinks.map((entry) => (
                 <Link
                   key={entry.link}
                   to={entry.url}
-                  smooth="easeOutQuint"
+                  smooth='easeOutQuint'
                   duration={3000}
                   offset={-80}
-                  className="hover:bg-gray-700 block px-3 py-2 rounded-md text-4xl"
+                  className='hover:bg-gray-700 block px-3 py-2 rounded-md text-4xl'
                   onClick={() => setIsOpen(false)}
                 >
                   {entry.link}

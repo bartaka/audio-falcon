@@ -140,8 +140,11 @@
 // mobile
 @media (max-width: 768px) {
     .modal {
-        width: 75%;
+        width: 90%;
         padding: 1.5rem;
+        overflow-y: auto;
+        max-height: 100vh;
+        text-align: justify;
 
         & .modal-content {
             flex-direction: column;
