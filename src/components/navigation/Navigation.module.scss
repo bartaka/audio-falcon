@@ -41,17 +41,14 @@
 // mobile
 @media (max-width: 768px) {
   .navigation {
-    top: 1rem;
-    left: 1rem;
+    font-family: "League Gothic";
+    text-transform: uppercase;
+    width: 100%;
+    left: 0;
 
-    & ul li {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .logo {
-      width: 18rem;
-      margin-bottom: 2rem;
+    .mobileLogo {
+      width: 7rem;
+      margin: 0 auto;
     }
   }
 }
