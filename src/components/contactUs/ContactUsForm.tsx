@@ -54,6 +54,7 @@ const ContactUsForm = (): React.ReactElement => {
                     name <span className={styles.required}>(required)</span>
                 </label>
                 <input
+                    className='text-black'
                     type='text'
                     id='name'
                     name='user_name'
@@ -65,6 +66,7 @@ const ContactUsForm = (): React.ReactElement => {
                     email <span className={styles.required}>(required)</span>
                 </label>
                 <input
+                    className='text-black'
                     type='email'
                     name='user_email'
                     id='email'
@@ -74,6 +76,7 @@ const ContactUsForm = (): React.ReactElement => {
             <div className={styles['input-container']}>
                 <label htmlFor='subject'>subject</label>
                 <input
+                    className='text-black'
                     type='text'
                     name='subject'
                     id='subject'
@@ -84,6 +87,7 @@ const ContactUsForm = (): React.ReactElement => {
                     message <span className={styles.required}>(required)</span>
                 </label>
                 <textarea
+                    className='text-black'
                     id='message'
                     name='message'
                     rows={7}

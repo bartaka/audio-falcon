@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "League Gothic";
   src: local('LeagueGothic'), url(./fonts/LeagueGothic-Regular-VariableFont_wdth.ttf);

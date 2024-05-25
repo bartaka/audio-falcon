@@ -5,7 +5,6 @@ import styles from './ScrollToTop.module.scss';
 
 const ScrollToTop = (): React.ReactElement => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
-    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     const goToTopHandler = (): void => {
         window.scrollTo({
@@ -15,8 +14,6 @@ const ScrollToTop = (): React.ReactElement => {
     };
 
     useEffect(() => {
-        if (window.innerWidth <= 768) setIsMobile(true);
-
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
                 setIsVisible(true);
@@ -28,7 +25,7 @@ const ScrollToTop = (): React.ReactElement => {
         <button
             className={styles['scroll-to-top-btn']}
             style={{
-                display: (isVisible && !isMobile)
+                display: (isVisible)
                     ? 'block'
                     : 'none'
             }}

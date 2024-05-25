@@ -22,3 +22,9 @@
         transform: scale(1.1);
     }
 }
+
+@media (max-width: 767px) {
+    .scroll-to-top-btn {
+        top: 80vh;
+    }
+}

@@ -1,12 +1,12 @@
 .navigation {
   position: absolute;
   z-index: 100;
-  top: 0;
-  left: 4.5rem;
+  top: 5rem;
+  left: 5rem;
 
   & ul {
     list-style-type: none;
-    margin-left: .6rem;
+    margin-left: 4rem;
   }
 
   & ul li {
@@ -35,23 +35,24 @@
 .logo {
   opacity: 0.8;
   width: 24rem;
-  margin-bottom: 6rem;
+  margin-bottom: 14rem;
 }
 
 // mobile
 @media (max-width: 768px) {
   .navigation {
-    top: 1rem;
-    left: 1rem;
+    font-family: "League Gothic";
+    text-transform: uppercase;
+    width: 100%;
+    top: 0;
+    left: 0;
 
-    & ul li {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .logo {
-      width: 18rem;
-      margin-bottom: 2rem;
+    .mobileLogo {
+      width: 7rem;
+      position: absolute;
+      top: 1.3rem;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
   }
 }
