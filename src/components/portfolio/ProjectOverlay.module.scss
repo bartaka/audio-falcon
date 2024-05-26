@@ -144,7 +144,7 @@
         padding: 1.5rem;
         overflow-y: auto;
         max-height: 100vh;
-        text-align: justify;
+        text-align: left;
 
         & .modal-content {
             flex-direction: column;
@@ -162,6 +162,10 @@
         & h2 {
             width: 80%;
             font-weight: 200;
+        }
+
+        & .description {
+            text-align: justify;
         }
     }
 }
