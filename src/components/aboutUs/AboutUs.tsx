@@ -14,7 +14,7 @@ const AboutUs = (): React.ReactElement => {
                 <div className={styles.text}>
                     <h3>Welcome to our website!</h3>
                     <p>
-                        We are <span className={styles.highlight}>Lukas Holocsy</span> and <span className={styles.highlight}>Barbora Kaňoková</span>, a dynamic duo based in Prague, Czech Republic. Lukas, a talented film and video game sound designer from Slovakia, has a remarkable knack for capturing emotions and enhancing storytelling through sound. Meanwhile, Barbora, with her administrative skills, ensures that our collaborative projects run smoothly and efficiently.
+                        We are <span className={styles.highlight}>Lukáš Holocsy</span> and <span className={styles.highlight}>Barbora Kaňoková</span>, a dynamic duo based in Prague, Czech Republic. Lukas, a talented film and video game sound designer from Slovakia, has a remarkable knack for capturing emotions and enhancing storytelling through sound. Meanwhile, Barbora, with her administrative skills, ensures that our collaborative projects run smoothly and efficiently.
                     </p>
                     <p>
                         Passionate about creativity and storytelling, we are open to working on a wide range of projects, including films, video games, and documentaries. Lukas' ability to craft immersive soundscapes, combined with Barbora's meticulous organization, allows us to deliver exceptional results to our clients.

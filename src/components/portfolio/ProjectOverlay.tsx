@@ -106,7 +106,7 @@ const ProjectOverlay = (props: Props): React.ReactElement => {
                                     }}
                                 />
                             }
-                            <p>
+                            <p className={styles.description}>
                                 <span className={styles['description-term']}>DESCRIPTION:</span> {description}
                             </p>
                         </div>
