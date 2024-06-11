@@ -1,34 +1,23 @@
 import React, { MouseEventHandler, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
+import { Project } from '../../interfaces/Project';
 import styles from './ProjectOverlay.module.scss';
 import { truncate } from '../../utils/Strings';
+import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder';
 
-type Props = {
-    title: string;
-    year: string;
-    role: string;
-    client: string;
-    web: string;
-    note: string;
-    description: string;
-    video?: string;
-    imgSrc?: string;
-    onClose: MouseEventHandler<HTMLElement>;
-};
-
-const ProjectOverlay = (props: Props): React.ReactElement => {
+const ProjectOverlay = (props: Project): React.ReactElement => {
     const {
-        title,
+        projectName,
         year,
         role,
         client,
-        web,
+        website,
         note,
         description,
         video = '',
-        imgSrc = '',
-        onClose
+        image = '',
+        // onClose
     } = props;
 
     const backdropRoot = document.getElementById('backdrop-root');
@@ -52,13 +41,19 @@ const ProjectOverlay = (props: Props): React.ReactElement => {
     return (
         <React.Fragment>
             {ReactDOM.createPortal(
-                <div className={styles.backdrop} onClick={onClose} />,
+                <div className={styles.backdrop}
+                // onClick={onClose}
+                />,
                 backdropRoot
             )}
             {ReactDOM.createPortal(
                 <div className={styles.modal}>
-                    <button className={styles['close-button']} onClick={onClose}>&times;</button>
-                    <h2>{title}</h2>
+                    <button className={styles['close-button']}
+                    // onClick={onClose}
+                    >
+                        &times;
+                    </button>
+                    <h2>{projectName}</h2>
                     <div className={styles['modal-content']}>
                         <div className={styles['modal-vid']}>
                             {video
@@ -69,7 +64,7 @@ const ProjectOverlay = (props: Props): React.ReactElement => {
                                     src={`https://www.youtube.com/embed/${new URL(video).searchParams.get('v')}`}
                                 />
                                 :
-                                <img src={imgSrc} />
+                                <img src={image as string} />
                             }
                         </div>
                         <div className={styles['modal-data']}>
@@ -88,22 +83,22 @@ const ProjectOverlay = (props: Props): React.ReactElement => {
                                 <span className={styles['description-term']}>WEB:</span>
                                 {' '}
                                 <a
-                                    href={web}
+                                    href={website}
                                     target='_blank'
                                     rel='noreferrer'
                                 >
-                                    {truncate(web, 41)}
+                                    {truncate(website, 41)}
                                 </a>
                             </p>
                             {note &&
                                 <p
                                     className={styles['note']}
-                                    dangerouslySetInnerHTML={{
-                                        __html: note.replace(
-                                            'Studio Beep',
-                                            '<a href="https://studiobeep.cz" target="_blank" rel="noopener noreferrer">Studio Beep</a>'
-                                        )
-                                    }}
+                                // dangerouslySetInnerHTML={{
+                                //     __html: note.replace(
+                                //         'Studio Beep',
+                                //         '<a href="https://studiobeep.cz" target="_blank" rel="noopener noreferrer">Studio Beep</a>'
+                                //     )
+                                // }}
                                 />
                             }
                             <p className={styles.description}>

@@ -1,9 +1,33 @@
+import { ReactElement, useEffect, useState } from 'react';
+import imageUrlBuilder from '@sanity/image-url';
+import client from '../../data/sanityClient';
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+
+import { Project } from '../../interfaces/Project';
 import Section from '../layout/Section';
 import ProjectTile from './ProjectTile';
-import { projectsData as data } from '../../data/portfolioProjects';
 import styles from './Portfolio.module.scss';
 
-const Portfolio = (): React.ReactElement => {
+const Portfolio = (): ReactElement => {
+    const [projects, setProjects] = useState<Project[]>([]);
+
+    const { projectId, dataset } = client.config();
+
+    const urlFor = (source: SanityImageSource) => {
+        return projectId && dataset
+            ? imageUrlBuilder({ projectId, dataset }).image(source)
+            : null;
+    };
+
+    useEffect(() => {
+        const query = '*[_type == "projects"]|order(orderRank)';
+        const fetchProjects = async () => {
+            const data = await client.fetch(query);
+            setProjects(data);
+        }
+        fetchProjects();
+    }, []);
+
     return (
         <Section
             sectionId='portfolio'
@@ -12,18 +36,18 @@ const Portfolio = (): React.ReactElement => {
             backgroundGradient
         >
             <div className={styles['tiles-container']}>
-                {data.map((project) => (
+                {projects && projects.map((project) => (
                     <ProjectTile
-                        imgSrc={project.imgSrc}
-                        imgAlt={project.imgAlt}
-                        key={project.id}
-                        title={project.projectName}
+                        key={project.slug?.current}
+                        image={urlFor(project.image)}
+                        imageAltText={project.imageAltText}
+                        projectName={project.projectName}
                         role={project.role}
-                        type={project.projectType}
+                        projectType={project.projectType}
                         year={project.year}
                         client={project.client}
-                        web={project.web}
-                        note={project.note}
+                        website={project.website}
+                        // note={project.note}
                         description={project.description}
                         video={project.video}
                     />

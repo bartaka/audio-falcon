@@ -2,32 +2,20 @@ import React, { useRef, useState } from 'react';
 
 import styles from './ProjectTile.module.scss';
 import ProjectOverlay from './ProjectOverlay';
+import { Project } from '../../interfaces/Project';
+import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder';
 
-type Props = {
-  imgSrc: string;
-  imgAlt: string;
-  type: string;
-  role: string;
-  title: string;
-  year: string;
-  client?: string;
-  web: string;
-  note?: string;
-  description: string;
-  video?: string;
-};
-
-const ProjectTile = (props: Props): React.ReactElement => {
+const ProjectTile = (props: Project): React.ReactElement => {
   const {
-    imgSrc,
-    imgAlt,
-    type,
+    image,
+    imageAltText,
+    projectType,
     role,
-    title,
+    projectName,
     year,
     client = '',
-    web,
-    note = '',
+    website,
+    // note = '',
     description,
     video = ''
   } = props;
@@ -36,33 +24,35 @@ const ProjectTile = (props: Props): React.ReactElement => {
   const [overlayDisplayed, setOverlayDisplayed] = useState(false);
 
   const handleTileClicked = () => setOverlayDisplayed(true);
-  const handleClose = () => setOverlayDisplayed(false);
+  // const handleClose = () => setOverlayDisplayed(false);
 
   return (
     <React.Fragment>
       {overlayDisplayed &&
         <ProjectOverlay
-          title={title}
+          projectName={projectName}
+          projectType={projectType}
+          imageAltText={imageAltText}
           year={year}
           role={role}
           client={client}
-          web={web}
-          note={note}
+          website={website}
+          // note={note}
           description={description}
           video={video}
-          imgSrc={imgSrc}
-          onClose={handleClose}
+          image={image || ''}
+        // onClose={handleClose}
         />}
       <div
         ref={tileRef}
         className={styles.tile}
         onClick={handleTileClicked}
       >
-        <img src={imgSrc} alt={imgAlt} />
+        <img src={image as string} alt={imageAltText} />
         <div className={styles['tile-details']}>
-          <h4 className='mt-10'>{type}</h4>
+          <h4 className='mt-10'>{projectType}</h4>
           <p>{role}</p>
-          <h3>{title}</h3>
+          <h3>{projectName}</h3>
         </div>
       </div>
     </React.Fragment>
