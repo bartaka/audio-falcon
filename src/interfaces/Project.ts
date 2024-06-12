@@ -1,5 +1,3 @@
-import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder';
-
 export interface Project {
     image: string;
     projectName: string;

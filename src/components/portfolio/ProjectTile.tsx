@@ -1,11 +1,10 @@
-import React, { useRef, useState } from 'react';
+import { Fragment, ReactElement, useRef, useState } from 'react';
 
 import styles from './ProjectTile.module.scss';
 import ProjectOverlay from './ProjectOverlay';
 import { Project } from '../../interfaces/Project';
-import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder';
 
-const ProjectTile = (props: Project): React.ReactElement => {
+const ProjectTile = (props: Project): ReactElement => {
   const {
     image,
     imageAltText,
@@ -27,7 +26,7 @@ const ProjectTile = (props: Project): React.ReactElement => {
   // const handleClose = () => setOverlayDisplayed(false);
 
   return (
-    <React.Fragment>
+    <Fragment>
       {overlayDisplayed &&
         <ProjectOverlay
           projectName={projectName}
@@ -40,7 +39,7 @@ const ProjectTile = (props: Project): React.ReactElement => {
           // note={note}
           description={description}
           video={video}
-          image={image || ''}
+          image={image}
         // onClose={handleClose}
         />}
       <div
@@ -55,7 +54,7 @@ const ProjectTile = (props: Project): React.ReactElement => {
           <h3>{projectName}</h3>
         </div>
       </div>
-    </React.Fragment>
+    </Fragment>
   );
 };
 

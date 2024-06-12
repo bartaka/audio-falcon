@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import { Project } from '../../interfaces/Project';
 import styles from './ProjectOverlay.module.scss';
 import { truncate } from '../../utils/Strings';
-import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder';
 
 const ProjectOverlay = (props: Project): React.ReactElement => {
     const {
@@ -16,7 +15,7 @@ const ProjectOverlay = (props: Project): React.ReactElement => {
         note,
         description,
         video = '',
-        image = '',
+        image,
         // onClose
     } = props;
 
@@ -64,7 +63,7 @@ const ProjectOverlay = (props: Project): React.ReactElement => {
                                     src={`https://www.youtube.com/embed/${new URL(video).searchParams.get('v')}`}
                                 />
                                 :
-                                <img src={image as string} />
+                                <img src={image} />
                             }
                         </div>
                         <div className={styles['modal-data']}>
