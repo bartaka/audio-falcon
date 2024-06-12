@@ -1,22 +1,30 @@
-import React, { MouseEventHandler, useEffect } from 'react';
+import { Fragment, ReactElement, MouseEventHandler, useEffect } from 'react';
 import ReactDOM from 'react-dom';
+import { toPlainText } from '@portabletext/react';
 
 import { Project } from '../../interfaces/Project';
 import styles from './ProjectOverlay.module.scss';
 import { truncate } from '../../utils/Strings';
 
-const ProjectOverlay = (props: Project): React.ReactElement => {
+type Props = {
+    project: Project;
+    onClose: MouseEventHandler<HTMLElement>;
+};
+
+const ProjectOverlay = (props: Props): ReactElement => {
     const {
-        projectName,
-        year,
-        role,
-        client,
-        website,
-        note,
-        description,
-        video = '',
-        image,
-        // onClose
+        project: {
+            projectName,
+            year,
+            role,
+            client,
+            website,
+            note,
+            description,
+            video,
+            image
+        },
+        onClose
     } = props;
 
     const backdropRoot = document.getElementById('backdrop-root');
@@ -38,17 +46,17 @@ const ProjectOverlay = (props: Project): React.ReactElement => {
     }, []);
 
     return (
-        <React.Fragment>
+        <Fragment>
             {ReactDOM.createPortal(
                 <div className={styles.backdrop}
-                // onClick={onClose}
+                    onClick={onClose}
                 />,
                 backdropRoot
             )}
             {ReactDOM.createPortal(
                 <div className={styles.modal}>
                     <button className={styles['close-button']}
-                    // onClick={onClose}
+                        onClick={onClose}
                     >
                         &times;
                     </button>
@@ -101,14 +109,14 @@ const ProjectOverlay = (props: Project): React.ReactElement => {
                                 />
                             }
                             <p className={styles.description}>
-                                <span className={styles['description-term']}>DESCRIPTION:</span> {description}
+                                <span className={styles['description-term']}>DESCRIPTION:</span> {toPlainText(description)}
                             </p>
                         </div>
                     </div>
                 </div>,
                 modalRoot
             )}
-        </React.Fragment>
+        </Fragment>
     );
 };
 

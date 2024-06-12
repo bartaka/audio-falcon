@@ -1,3 +1,5 @@
+import { PortableTextBlock } from '@portabletext/types'
+
 export interface Project {
     image: string;
     projectName: string;
@@ -7,7 +9,7 @@ export interface Project {
     year: string;
     website: string;
     client: string;
-    description: string;
+    description: PortableTextBlock[];
     video: string;
     note?: boolean;
     imageAltText: string;

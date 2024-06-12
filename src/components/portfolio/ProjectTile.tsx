@@ -10,44 +10,28 @@ const ProjectTile = (props: Project): ReactElement => {
     imageAltText,
     projectType,
     role,
-    projectName,
-    year,
-    client = '',
-    website,
-    // note = '',
-    description,
-    video = ''
+    projectName
   } = props;
 
   const tileRef = useRef(null);
   const [overlayDisplayed, setOverlayDisplayed] = useState(false);
 
   const handleTileClicked = () => setOverlayDisplayed(true);
-  // const handleClose = () => setOverlayDisplayed(false);
+  const handleClose = () => setOverlayDisplayed(false);
 
   return (
     <Fragment>
       {overlayDisplayed &&
         <ProjectOverlay
-          projectName={projectName}
-          projectType={projectType}
-          imageAltText={imageAltText}
-          year={year}
-          role={role}
-          client={client}
-          website={website}
-          // note={note}
-          description={description}
-          video={video}
-          image={image}
-        // onClose={handleClose}
+          project={props}
+          onClose={handleClose}
         />}
       <div
         ref={tileRef}
         className={styles.tile}
         onClick={handleTileClicked}
       >
-        <img src={image as string} alt={imageAltText} />
+        <img src={image} alt={imageAltText} />
         <div className={styles['tile-details']}>
           <h4 className='mt-10'>{projectType}</h4>
           <p>{role}</p>

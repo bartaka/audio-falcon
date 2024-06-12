@@ -28,22 +28,27 @@ const Portfolio = (): ReactElement => {
             backgroundGradient
         >
             <div className={styles['tiles-container']}>
-                {projects.map((project) => (
-                    <ProjectTile
-                        key={project.slug?.current}
-                        image={urlFor(project.image) || ''}
-                        imageAltText={project.imageAltText}
-                        projectName={project.projectName}
-                        role={project.role}
-                        projectType={project.projectType}
-                        year={project.year}
-                        client={project.client}
-                        website={project.website}
-                        // note={project.note}
-                        description={project.description}
-                        video={project.video}
-                    />
-                ))}
+                {projects.length > 0
+                    ?
+                    projects.map((project) => (
+                        <ProjectTile
+                            key={project.slug?.current}
+                            image={urlFor(project.image) || ''}
+                            imageAltText={project.imageAltText}
+                            projectName={project.projectName}
+                            role={project.role}
+                            projectType={project.projectType}
+                            year={project.year}
+                            client={project.client}
+                            website={project.website}
+                            // note={project.note}
+                            description={project.description}
+                            video={project.video}
+                        />
+                    ))
+                    :
+                    <div>Loading...</div>
+                }
             </div>
         </Section>
     );
