@@ -1,10 +1,12 @@
+import { ReactElement } from 'react';
+
 import Section from '../layout/Section';
 import Activity from './Activity';
 
 import { whatWeDoData as data } from '../../data/whatWeDo';
 import styles from './WhatWeDo.module.scss';
 
-const WhatWeDo = (): React.ReactElement => {
+const WhatWeDo = (): ReactElement => {
     return (
         <Section
             sectionId='what-we-do'

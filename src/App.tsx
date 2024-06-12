@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment, ReactElement } from 'react';
 import {
   BrowserRouter as Router,
   Navigate,
@@ -14,12 +14,12 @@ import ContactUsSection from './components/contactUs/ContactUsSection';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/buttons/ScrollToTop';
 
-const App = (): React.ReactElement => {
+const App = (): ReactElement => {
   return (
     <Router>
       <Routes>
         <Route path='/' element={
-          <React.Fragment>
+          <Fragment>
             <Header />
             <Portfolio />
             <WhatWeDo />
@@ -27,7 +27,7 @@ const App = (): React.ReactElement => {
             <ContactUsSection />
             <Footer />
             <ScrollToTop />
-          </React.Fragment>
+          </Fragment>
         } />
         <Route path='/*' element={<Navigate to='/' />} />
       </Routes>

@@ -1,11 +1,13 @@
+import { ReactElement, ReactNode } from 'react';
+
 import styles from './ButtonPrimary.module.scss';
 
 type Props = {
     btnType: 'button' | 'submit';
-    children: React.ReactNode;
+    children: ReactNode;
 };
 
-const ButtonPrimary = (props: Props): React.ReactElement => {
+const ButtonPrimary = (props: Props): ReactElement => {
     const { btnType, children } = props;
 
     return (

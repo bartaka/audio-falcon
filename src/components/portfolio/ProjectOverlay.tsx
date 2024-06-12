@@ -98,15 +98,9 @@ const ProjectOverlay = (props: Props): ReactElement => {
                                 </a>
                             </p>
                             {note &&
-                                <p
-                                    className={styles['note']}
-                                // dangerouslySetInnerHTML={{
-                                //     __html: note.replace(
-                                //         'Studio Beep',
-                                //         '<a href="https://studiobeep.cz" target="_blank" rel="noopener noreferrer">Studio Beep</a>'
-                                //     )
-                                // }}
-                                />
+                                <p className={styles['note']}>
+                                    Post-Production was done in <a href="https://studiobeep.cz" target="_blank" rel="noopener noreferrer">Studio Beep</a>.
+                                </p>
                             }
                             <p className={styles.description}>
                                 <span className={styles['description-term']}>DESCRIPTION:</span> {toPlainText(description)}

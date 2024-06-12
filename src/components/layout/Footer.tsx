@@ -1,7 +1,9 @@
+import { ReactElement } from 'react';
+
 import classes from './Footer.module.scss';
 import logo from '../../assets/logo/AF_Logo_mobile.png';
 
-const Footer = (): React.ReactElement => {
+const Footer = (): ReactElement => {
   const currentYear: number = new Date().getFullYear();
 
   return (

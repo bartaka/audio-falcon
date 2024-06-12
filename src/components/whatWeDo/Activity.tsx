@@ -1,3 +1,5 @@
+import { ReactElement } from 'react';
+
 import styles from './Activity.module.scss';
 
 type Props = {
@@ -8,7 +10,7 @@ type Props = {
     p: string;
 };
 
-const Activity = (props: Props): React.ReactElement => {
+const Activity = (props: Props): ReactElement => {
     const { imgSrc, imgAlt, h3, h4, p } = props;
 
     return (

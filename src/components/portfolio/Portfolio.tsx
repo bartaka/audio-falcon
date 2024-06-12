@@ -41,7 +41,7 @@ const Portfolio = (): ReactElement => {
                             year={project.year}
                             client={project.client}
                             website={project.website}
-                            // note={project.note}
+                            note={project.note}
                             description={project.description}
                             video={project.video}
                         />
