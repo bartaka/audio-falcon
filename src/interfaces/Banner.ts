@@ -3,4 +3,4 @@ export interface Banner {
     desktopImage: string;
     mobileImage: string;
     altText: string;
-}
+};
