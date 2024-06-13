@@ -5,6 +5,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import client from '../../data/sanityClient';
 import { Banner } from '../../interfaces/Banner';
 import { urlFor } from '../../utils/Images';
+import Loader from '../loader/Loader';
 
 const Banners = (): ReactElement => {
   const [banners, setBanners] = useState<Banner[]>([]);
@@ -47,7 +48,7 @@ const Banners = (): ReactElement => {
           ))}
         </Carousel>
         :
-        <div>Loading...</div>
+        <Loader />
       }
     </Fragment>
   );

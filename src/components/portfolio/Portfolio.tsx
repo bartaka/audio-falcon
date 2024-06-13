@@ -4,6 +4,7 @@ import client from '../../data/sanityClient';
 import { Project } from '../../interfaces/Project';
 import { urlFor } from '../../utils/Images';
 import Section from '../layout/Section';
+import Loader from '../loader/Loader';
 import ProjectTile from './ProjectTile';
 import styles from './Portfolio.module.scss';
 
@@ -27,10 +28,10 @@ const Portfolio = (): ReactElement => {
             subheading='latest projects'
             backgroundGradient
         >
-            <div className={styles['tiles-container']}>
-                {projects.length > 0
-                    ?
-                    projects.map((project) => (
+            {projects.length > 0
+                ?
+                <div className={styles['tiles-container']}>
+                    {projects.map((project) => (
                         <ProjectTile
                             key={project.slug?.current}
                             image={urlFor(project.image) || ''}
@@ -45,11 +46,11 @@ const Portfolio = (): ReactElement => {
                             description={project.description}
                             video={project.video}
                         />
-                    ))
-                    :
-                    <div>Loading...</div>
-                }
-            </div>
+                    ))}
+                </div>
+                :
+                <Loader />
+            }
         </Section>
     );
 };
