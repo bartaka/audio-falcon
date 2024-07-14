@@ -11,13 +11,17 @@ const Banners = (): ReactElement => {
   const [banners, setBanners] = useState<Banner[]>([]);
 
   useEffect(() => {
-    const fetchBanners = async () => {
-      const query: string = '*[_type == "banners"]|order(orderRank)';
-      const data: Banner[] = await client.fetch(query);
-      setBanners(data);
-    };
+    try {
+      const fetchBanners = async () => {
+        const query: string = '*[_type == "banners"]|order(orderRank)';
+        const data: Banner[] = await client.fetch(query);
+        setBanners(data);
+      };
 
-    fetchBanners();
+      fetchBanners();
+    } catch (error) {
+      console.error(`Error fetching banners: ${error}`);
+    }
   }, []);
 
   return (

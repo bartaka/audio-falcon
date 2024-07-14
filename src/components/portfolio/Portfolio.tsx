@@ -12,13 +12,17 @@ const Portfolio = (): ReactElement => {
     const [projects, setProjects] = useState<Project[]>([]);
 
     useEffect(() => {
-        const query = '*[_type == "projects"]|order(orderRank)';
-        const fetchProjects = async () => {
-            const data: Project[] = await client.fetch(query);
-            setProjects(data);
-        };
+        try {
+            const query = '*[_type == "projects"]|order(orderRank)';
+            const fetchProjects = async () => {
+                const data: Project[] = await client.fetch(query);
+                setProjects(data);
+            };
 
-        fetchProjects();
+            fetchProjects();
+        } catch (error) {
+            console.error(`Error fetching projects: ${error}`);
+        }
     }, []);
 
     return (
