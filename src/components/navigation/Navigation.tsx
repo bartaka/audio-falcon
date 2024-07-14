@@ -1,11 +1,12 @@
+import { ReactElement, useEffect, useState, useRef } from 'react';
 import { Link } from 'react-scroll';
 import { Transition } from '@headlessui/react';
-import { useEffect, useState, useRef } from 'react';
+
 import styles from './Navigation.module.scss';
 import logo from '../../assets/logo/AF_Logo_New.png';
 import logoMobile from '../../assets/logo/AF_Logo_mobile.png';
 
-const Navigation = (): React.ReactElement => {
+const Navigation = (): ReactElement => {
   const navLinks = [
     { link: 'work', url: 'portfolio' },
     { link: 'services', url: 'what-we-do' },

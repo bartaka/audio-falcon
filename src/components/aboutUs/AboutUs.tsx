@@ -1,8 +1,10 @@
+import { ReactElement } from 'react';
+
 import styles from './AboutUs.module.scss';
 import Section from '../layout/Section';
 import image from '../../assets/aboutUs/about-us.jpg';
 
-const AboutUs = (): React.ReactElement => {
+const AboutUs = (): ReactElement => {
     return (
         <Section
             sectionId='about-us'

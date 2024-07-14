@@ -1,17 +1,17 @@
-import { useRef, useState } from 'react';
+import { FormEvent, ReactElement, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ScaleLoader } from 'react-spinners';
 
 import styles from './ContactUsForm.module.scss';
 import ButtonPrimary from '../buttons/ButtonPrimary';
 
-const ContactUsForm = (): React.ReactElement => {
+const ContactUsForm = (): ReactElement => {
     const form = useRef<HTMLFormElement>(null);
 
     const [btnText, setBtnText] = useState('send message');
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
         setIsLoading(true);

@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { ReactElement, useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 
 import styles from './ScrollToTop.module.scss';
 
-const ScrollToTop = (): React.ReactElement => {
+const ScrollToTop = (): ReactElement => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
     const goToTopHandler = (): void => {

@@ -2,10 +2,12 @@
 
 # dependencies
 /node_modules
+/studio/node_modules
 
 # production
 /build
 /dist
+/studio/dist
 
 # misc
 .DS_Store
@@ -18,6 +20,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/studio/.sanity
 
 # firebase cache
 .firebase

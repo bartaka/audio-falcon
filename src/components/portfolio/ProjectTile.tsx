@@ -1,35 +1,16 @@
-import React, { useRef, useState } from 'react';
+import { Fragment, ReactElement, useRef, useState } from 'react';
 
 import styles from './ProjectTile.module.scss';
 import ProjectOverlay from './ProjectOverlay';
+import { Project } from '../../interfaces/Project';
 
-type Props = {
-  imgSrc: string;
-  imgAlt: string;
-  type: string;
-  role: string;
-  title: string;
-  year: string;
-  client?: string;
-  web: string;
-  note?: string;
-  description: string;
-  video?: string;
-};
-
-const ProjectTile = (props: Props): React.ReactElement => {
+const ProjectTile = (props: Project): ReactElement => {
   const {
-    imgSrc,
-    imgAlt,
-    type,
+    image,
+    imageAltText,
+    projectType,
     role,
-    title,
-    year,
-    client = '',
-    web,
-    note = '',
-    description,
-    video = ''
+    projectName
   } = props;
 
   const tileRef = useRef(null);
@@ -39,18 +20,10 @@ const ProjectTile = (props: Props): React.ReactElement => {
   const handleClose = () => setOverlayDisplayed(false);
 
   return (
-    <React.Fragment>
+    <Fragment>
       {overlayDisplayed &&
         <ProjectOverlay
-          title={title}
-          year={year}
-          role={role}
-          client={client}
-          web={web}
-          note={note}
-          description={description}
-          video={video}
-          imgSrc={imgSrc}
+          project={props}
           onClose={handleClose}
         />}
       <div
@@ -58,14 +31,14 @@ const ProjectTile = (props: Props): React.ReactElement => {
         className={styles.tile}
         onClick={handleTileClicked}
       >
-        <img src={imgSrc} alt={imgAlt} />
+        <img src={image} alt={imageAltText} />
         <div className={styles['tile-details']}>
-          <h4 className='mt-10'>{type}</h4>
+          <h4 className='mt-10'>{projectType}</h4>
           <p>{role}</p>
-          <h3>{title}</h3>
+          <h3>{projectName}</h3>
         </div>
       </div>
-    </React.Fragment>
+    </Fragment>
   );
 };
 

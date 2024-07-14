@@ -1,3 +1,4 @@
+import { ReactElement, ReactNode } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
 import styles from './Section.module.scss';
@@ -7,10 +8,10 @@ type Props = {
     heading: string;
     subheading?: string;
     backgroundGradient?: boolean;
-    children: React.ReactNode;
+    children: ReactNode;
 };
 
-const Section = (props: Props): React.ReactElement => {
+const Section = (props: Props): ReactElement => {
     const {
         sectionId,
         heading,
