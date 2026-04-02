@@ -96,7 +96,7 @@ const ProjectOverlay = (props: Props): ReactElement => {
                     aria-label={projectName}
                 >
                     <button
-                        className="text-text-main cursor-pointer absolute top-[1rem] right-[1rem] bg-transparent border-none text-[3rem] transition-all duration-500 hover:scale-[1.15]"
+                        className="text-text-main cursor-pointer absolute top-[1rem] right-[1rem] bg-transparent border-none text-[3rem] transition-all duration-500 hover:scale-[1.15] flex items-center justify-center leading-none w-[3rem] h-[3rem]"
                         onClick={onClose}
                     >
                         &times;
