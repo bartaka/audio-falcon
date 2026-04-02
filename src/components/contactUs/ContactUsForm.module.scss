@@ -46,6 +46,18 @@
         height: 3rem;
     }
 
+    & .input-error {
+        border: 2px solid #e05252 !important;
+    }
+
+    & .error-msg {
+        align-self: flex-start;
+        font-size: 1.2rem;
+        color: #e05252;
+        margin-top: -1.5rem;
+        margin-bottom: 1rem;
+    }
+
     & .privacy-notice {
         width: 40%;
         margin-top: 1rem;
