@@ -101,6 +101,9 @@ const ContactUsForm = (): ReactElement => {
                     : btnText
                 }
             </ButtonPrimary>
+            <p className={styles['privacy-notice']}>
+                Your name and email are used only to reply to your message and are not stored or shared with third parties.
+            </p>
         </form>
     );
 };

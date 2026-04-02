@@ -45,6 +45,14 @@
     & input {
         height: 3rem;
     }
+
+    & .privacy-notice {
+        width: 40%;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        color: $text-color-grey;
+        text-align: center;
+    }
 }
 
 // Mobile
@@ -52,6 +60,10 @@
     .contact-us-form {
 
         & .input-container {
+            width: 80%;
+        }
+
+        & .privacy-notice {
             width: 80%;
         }
     }
