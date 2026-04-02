@@ -21,7 +21,7 @@ const Activity = (props: Props): ReactElement => {
                 />
             </div>
             <div className='copy'>
-                <h3 className="text-teal uppercase text-[3rem] mt-0 mb-0 leading-[1.7] font-thin tracking-[2px] p-0 max-md:mb-[5rem] max-md:leading-none max-md:text-center 3xl:text-[3rem]">{h3}</h3>
+                <h3 className="text-teal uppercase text-[3rem] mt-0 mb-12 leading-[1.7] font-thin tracking-[2px] p-0 max-md:mb-[5rem] max-md:leading-none max-md:text-center 3xl:text-[3rem]">{h3}</h3>
                 <h4 className="text-text-grey capitalize text-[2.4rem] -mt-[4.9rem] -mb-[0.8rem] leading-[1.7] font-thin tracking-[2px] p-0 max-md:mb-[2.5rem] max-md:leading-none max-md:text-center">{h4}</h4>
                 <p
                     className="font-am-sans leading-[1.2] mb-[2.4rem] mt-[2.4rem]"
