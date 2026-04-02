@@ -1,10 +1,12 @@
-import { Fragment, ReactElement, MouseEventHandler, useEffect } from 'react';
+import { Fragment, ReactElement, MouseEventHandler, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { toPlainText } from '@portabletext/react';
 
 import { Project } from '../../interfaces/Project';
 import styles from './ProjectOverlay.module.scss';
 import { truncate } from '../../utils/Strings';
+
+const FOCUSABLE = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
 
 type Props = {
     project: Project;
@@ -29,6 +31,9 @@ const ProjectOverlay = (props: Props): ReactElement => {
 
     const backdropRoot = document.getElementById('backdrop-root');
     const modalRoot = document.getElementById('modal-root');
+    const modalRef = useRef<HTMLDivElement>(null);
+    const onCloseRef = useRef(onClose);
+    onCloseRef.current = onClose;
 
     if (!backdropRoot || !modalRoot) {
         throw new Error('Required root elements not found');
@@ -39,9 +44,19 @@ const ProjectOverlay = (props: Props): ReactElement => {
         document.body.style.paddingRight = `${scrollbarWidth}px`;
         document.body.style.overflow = 'hidden';
 
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                (onCloseRef.current as unknown as () => void)();
+                return;
+            }
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+
         return () => {
             document.body.style.overflow = 'auto';
             document.body.style.paddingRight = '';
+            document.removeEventListener('keydown', handleKeyDown);
         };
     }, []);
 
@@ -54,7 +69,7 @@ const ProjectOverlay = (props: Props): ReactElement => {
                 backdropRoot
             )}
             {ReactDOM.createPortal(
-                <div className={styles.modal}>
+                <div className={styles.modal} ref={modalRef} role='dialog' aria-modal='true' aria-label={projectName}>
                     <button className={styles['close-button']}
                         onClick={onClose}
                     >
