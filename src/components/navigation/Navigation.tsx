@@ -65,7 +65,7 @@ const Navigation = (): ReactElement => {
               <Link
                 to={entry.url}
                 smooth='easeOutQuint'
-                duration={3000}
+                duration={2000}
                 offset={-80}
               >
                 {entry.link}
@@ -95,7 +95,7 @@ const Navigation = (): ReactElement => {
                   key={entry.link}
                   to={entry.url}
                   smooth='easeOutQuint'
-                  duration={3000}
+                  duration={1000}
                   offset={-80}
                   className='hover:bg-gray-700 block px-3 py-2 rounded-md text-4xl'
                   onClick={() => setIsOpen(false)}

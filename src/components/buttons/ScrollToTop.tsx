@@ -23,12 +23,7 @@ const ScrollToTop = (): ReactElement => {
 
     return (
         <button
-            className={styles['scroll-to-top-btn']}
-            style={{
-                display: (isVisible)
-                    ? 'block'
-                    : 'none'
-            }}
+            className={`${styles['scroll-to-top-btn']} ${isVisible ? styles.visible : ''}`}
             onClick={goToTopHandler}
         >
             <FaArrowUp className={styles.arrow} />
