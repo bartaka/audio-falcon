@@ -6,7 +6,6 @@ import { urlFor } from '../../utils/Images';
 import Section from '../layout/Section';
 import Loader from '../loader/Loader';
 import ProjectTile from './ProjectTile';
-import styles from './Portfolio.module.scss';
 
 const Portfolio = (): ReactElement => {
     const [projects, setProjects] = useState<Project[]>([]);
@@ -34,7 +33,7 @@ const Portfolio = (): ReactElement => {
         >
             {projects.length > 0
                 ?
-                <div className={styles['tiles-container']}>
+                <div className="w-4/5 mx-auto grid gap-[2rem] grid-cols-1 min-[481px]:grid-cols-2 md:grid-cols-3 3xl:w-[65%]">
                     {projects.map((project) => (
                         <ProjectTile
                             key={project.slug?.current}

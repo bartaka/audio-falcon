@@ -2,7 +2,6 @@ import { ReactElement, useEffect, useState, useRef } from 'react';
 import { Link } from 'react-scroll';
 import { Transition } from '@headlessui/react';
 
-import styles from './Navigation.module.scss';
 import logo from '../../assets/logo/AF_Logo_New.png';
 import logoMobile from '../../assets/logo/AF_Logo_mobile.png';
 
@@ -30,7 +29,7 @@ const Navigation = (): ReactElement => {
   }, [isOpen]);
 
   return (
-    <div className={styles.navigation}>
+    <div className="absolute top-0 left-0 w-full z-[100] md:top-[5rem] md:left-[5rem] md:w-auto">
       <div className='md:hidden bg-black top-0 py-12 px-4 flex justify-between items-center z-50'>
         <button
           type='button'
@@ -52,21 +51,22 @@ const Navigation = (): ReactElement => {
             />
           </svg>
         </button>
-        <img src={logoMobile} className={styles.mobileLogo} alt='Audio Falcon logo' />
+        <img src={logoMobile} className="w-[7rem] absolute top-[1.3rem] left-1/2 -translate-x-1/2" alt='Audio Falcon logo' />
       </div>
 
       <div className='hidden md:block'>
         <a href='/'>
-          <img src={logo} className={styles.logo} alt='Audio Falcon logo' />
+          <img src={logo} className="opacity-[0.8] w-[24rem] mb-[14rem] 3xl:w-[28rem] 3xl:mb-[19rem]" alt='Audio Falcon logo' />
         </a>
-        <ul>
+        <ul className="list-none ml-[4rem]">
           {navLinks.map((entry) => (
-            <li key={entry.link}>
+            <li key={entry.link} className="text-[2.5rem] mb-[3rem] transition-all duration-[400ms] 3xl:text-[3.5rem]">
               <Link
                 to={entry.url}
                 smooth='easeOutQuint'
                 duration={2000}
                 offset={-80}
+                className="opacity-[0.85] no-underline uppercase text-inherit transition-all duration-[400ms] cursor-pointer inline-block origin-center hover:opacity-100 hover:scale-105"
               >
                 {entry.link}
               </Link>
@@ -95,9 +95,9 @@ const Navigation = (): ReactElement => {
                   key={entry.link}
                   to={entry.url}
                   smooth='easeOutQuint'
-                  duration={1000}
+                  duration={2000}
                   offset={-80}
-                  className='hover:bg-gray-700 block px-3 py-2 rounded-md text-4xl'
+                  className='hover:bg-gray-700 block px-3 py-2 rounded-md text-4xl uppercase'
                   onClick={() => setIsOpen(false)}
                 >
                   {entry.link}

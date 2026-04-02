@@ -4,7 +4,6 @@ import Section from '../layout/Section';
 import Activity from './Activity';
 
 import { whatWeDoData as data } from '../../data/whatWeDo';
-import styles from './WhatWeDo.module.scss';
 
 const WhatWeDo = (): ReactElement => {
     return (
@@ -14,7 +13,7 @@ const WhatWeDo = (): ReactElement => {
             subheading='what we do'
             backgroundGradient
         >
-            <div className={styles.container}>
+            <div className="w-[70%] mx-auto mt-[1rem] -mb-[5rem] flex flex-col justify-between items-center max-md:w-4/5 max-md:mt-[5rem] max-md:mb-0">
                 {data.map((activity) => (
                     <Activity
                         key={activity.id}

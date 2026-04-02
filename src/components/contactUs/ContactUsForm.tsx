@@ -2,7 +2,6 @@ import { FocusEvent, FormEvent, ReactElement, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ScaleLoader } from 'react-spinners';
 
-import styles from './ContactUsForm.module.scss';
 import ButtonPrimary from '../buttons/ButtonPrimary';
 
 type FieldErrors = { name: string; email: string; message: string };
@@ -68,51 +67,54 @@ const ContactUsForm = (): ReactElement => {
         });
     };
 
+    const inputBase = "w-full mb-[2rem] bg-text-main border-2 border-transparent rounded-[5px] text-[1.5rem] pl-[1rem] font-poppins transition-[border] duration-500 focus:!outline-none focus:border-teal text-black";
+    const inputError = "!border-error";
+
     return (
-        <form className={styles['contact-us-form']} ref={form} onSubmit={handleSubmit}>
-            <div className={styles['input-container']}>
-                <label htmlFor='name'>
-                    name <span className={styles.required}>(required)</span>
+        <form className="flex flex-col items-center" ref={form} onSubmit={handleSubmit}>
+            <div className="flex flex-col items-center w-4/5 md:w-2/5">
+                <label className="self-start text-[1.8rem]" htmlFor='name'>
+                    name <span className="text-[1.4rem]">(required)</span>
                 </label>
                 <input
-                    className={`text-black ${errors.name ? styles['input-error'] : ''}`}
+                    className={`${inputBase} h-[3rem] ${errors.name ? inputError : ''}`}
                     type='text'
                     id='name'
                     name='user_name'
                     required
                     onBlur={handleBlur}
                 />
-                {errors.name && <span className={styles['error-msg']}>{errors.name}</span>}
+                {errors.name && <span className="self-start text-[1.2rem] text-error -mt-[1.5rem] mb-[1rem]">{errors.name}</span>}
             </div>
-            <div className={styles['input-container']}>
-                <label htmlFor='email'>
-                    email <span className={styles.required}>(required)</span>
+            <div className="flex flex-col items-center w-4/5 md:w-2/5">
+                <label className="self-start text-[1.8rem]" htmlFor='email'>
+                    email <span className="text-[1.4rem]">(required)</span>
                 </label>
                 <input
-                    className={`text-black ${errors.email ? styles['input-error'] : ''}`}
+                    className={`${inputBase} h-[3rem] ${errors.email ? inputError : ''}`}
                     type='email'
                     name='user_email'
                     id='email'
                     required
                     onBlur={handleBlur}
                 />
-                {errors.email && <span className={styles['error-msg']}>{errors.email}</span>}
+                {errors.email && <span className="self-start text-[1.2rem] text-error -mt-[1.5rem] mb-[1rem]">{errors.email}</span>}
             </div>
-            <div className={styles['input-container']}>
-                <label htmlFor='subject'>subject</label>
+            <div className="flex flex-col items-center w-4/5 md:w-2/5">
+                <label className="self-start text-[1.8rem]" htmlFor='subject'>subject</label>
                 <input
-                    className='text-black'
+                    className={`${inputBase} h-[3rem]`}
                     type='text'
                     name='subject'
                     id='subject'
                 />
             </div>
-            <div className={styles['input-container']}>
-                <label htmlFor='message'>
-                    message <span className={styles.required}>(required)</span>
+            <div className="flex flex-col items-center w-4/5 md:w-2/5">
+                <label className="self-start text-[1.8rem]" htmlFor='message'>
+                    message <span className="text-[1.4rem]">(required)</span>
                 </label>
                 <textarea
-                    className={`text-black ${errors.message ? styles['input-error'] : ''}`}
+                    className={`${inputBase} ${errors.message ? inputError : ''}`}
                     id='message'
                     name='message'
                     rows={7}
@@ -120,7 +122,7 @@ const ContactUsForm = (): ReactElement => {
                     required
                     onBlur={handleBlur}
                 ></textarea>
-                {errors.message && <span className={styles['error-msg']}>{errors.message}</span>}
+                {errors.message && <span className="self-start text-[1.2rem] text-error -mt-[1.5rem] mb-[1rem]">{errors.message}</span>}
             </div>
             <ButtonPrimary btnType='submit'>
                 {isLoading
@@ -128,7 +130,7 @@ const ContactUsForm = (): ReactElement => {
                     : btnText
                 }
             </ButtonPrimary>
-            <p className={styles['privacy-notice']}>
+            <p className="w-4/5 md:w-2/5 mt-[1rem] text-[1.2rem] text-text-grey text-center">
                 Your name and email are used only to reply to your message and are not stored or shared with third parties.
             </p>
         </form>

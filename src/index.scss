@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 @font-face {
   font-family: "League Gothic";
   src: local('LeagueGothic'), url(./fonts/LeagueGothic-Regular-VariableFont_wdth.ttf);
@@ -12,15 +14,13 @@
   src: local('AMSANSR'), url(./fonts/AMSANSR.otf);
 }
 
-@import '../src/scss/variables.scss';
-
 html {
   font-size: 62.5%;
 }
 
 body {
-  background-color: $bg-color-main;
-  color: $text-color-main;
+  background-color: #080808;
+  color: #eaeaea;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -32,6 +32,10 @@ body {
 }
 
 ::selection {
-  color: $text-color-main;
-  background-color: $text-color-secondary;
+  color: #eaeaea;
+  background-color: #369093;
+}
+
+.highlight {
+  color: #369093;
 }

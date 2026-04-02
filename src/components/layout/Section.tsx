@@ -1,8 +1,6 @@
 import { ReactElement, ReactNode } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
-import styles from './Section.module.scss';
-
 type Props = {
     sectionId: string;
     heading: string;
@@ -20,11 +18,7 @@ const Section = (props: Props): ReactElement => {
         children
     } = props;
 
-    const sectionStyles = `
-        ${styles.section} ${backgroundGradient
-            ? styles.gradient
-            : ''}
-    `;
+    const sectionStyles = `my-[11rem] md:mt-[15rem] md:mb-[30rem] 3xl:mb-[50rem] ${backgroundGradient ? 'bg-[linear-gradient(180deg,#080808,#141414,#080808)]' : ''}`;
 
     return (
         <Fade
@@ -36,10 +30,10 @@ const Section = (props: Props): ReactElement => {
                 className={sectionStyles}
                 id={sectionId}
             >
-                <div className={styles['section-heading']}>
-                    <h2>{heading}</h2>
+                <div className="block mx-auto my-[4rem] w-fit min-w-[20rem] max-w-[40%] 3xl:max-w-[30%] text-center leading-none max-md:w-1/2">
+                    <h2 className="text-[4rem] text-white border-b border-white uppercase tracking-[2px] mb-0 max-md:font-extralight">{heading}</h2>
                     {subheading &&
-                        <h3>{subheading}</h3>}
+                        <h3 className="text-[1.1rem] font-thin mt-[4px] uppercase tracking-[5px]">{subheading}</h3>}
                 </div>
                 <Fade
                     delay={500}
