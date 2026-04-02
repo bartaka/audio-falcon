@@ -1,10 +1,20 @@
-import { ReactElement } from 'react';
+import { ReactElement, useEffect, useState } from 'react';
 
+import client from '../../data/sanityClient';
 import styles from './AboutUs.module.scss';
 import Section from '../layout/Section';
 import image from '../../assets/aboutUs/about-us.jpg';
 
 const AboutUs = (): ReactElement => {
+    const [cvUrl, setCvUrl] = useState<string | null>(null);
+
+    useEffect(() => {
+        const query = '*[_type == "files"][0]{ "cvUrl": cv.asset->url }';
+        client.fetch(query).then((data) => {
+            if (data?.cvUrl) setCvUrl(data.cvUrl);
+        });
+    }, []);
+
     return (
         <Section
             sectionId='about-us'
@@ -24,11 +34,13 @@ const AboutUs = (): ReactElement => {
                     <p>
                         With a client-centric approach, we value effective communication and close collaboration to bring your vision to life. Our portfolio showcases our previous works and the diverse narratives we have been a part of. Whether you are a filmmaker, a game developer, or a documentary producer, we are eager to join you on your next creative endeavor. Let's create something remarkable together!
                     </p>
-                    <p>
-                        DOWNLOAD CV: <a className='underline' href='/Lukas Holocsy CV.pdf' download>
-                            HERE
-                        </a>
-                    </p>
+                    {cvUrl && (
+                        <p>
+                            DOWNLOAD CV: <a className='underline' href={cvUrl} download target='_blank' rel='noreferrer'>
+                                HERE
+                            </a>
+                        </p>
+                    )}
                 </div>
             </div>
         </Section>

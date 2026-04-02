@@ -1,5 +1,5 @@
 import type { StructureResolver } from 'sanity/structure'
-import { DatabaseIcon, ImageIcon, ProjectsIcon } from '@sanity/icons';
+import { DatabaseIcon, ImageIcon, ProjectsIcon, DocumentIcon } from '@sanity/icons';
 import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 
 export const structure: StructureResolver = (S, context) =>
@@ -21,6 +21,14 @@ export const structure: StructureResolver = (S, context) =>
                 S,
                 context
             }),
+            S.listItem()
+                .title('Files')
+                .icon(DocumentIcon)
+                .child(
+                    S.document()
+                        .schemaType('files')
+                        .documentId('files')
+                ),
             S.divider(),
             S.documentTypeListItem('soundBanks').title('Sound Banks').icon(DatabaseIcon),
         ]);
