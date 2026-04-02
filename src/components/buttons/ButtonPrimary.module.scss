@@ -11,6 +11,16 @@
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: darken($text-color-secondary, 10%);
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
 }
 
 // Mobile
