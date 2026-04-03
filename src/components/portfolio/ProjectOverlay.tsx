@@ -1,4 +1,4 @@
-import { Fragment, ReactElement, MouseEventHandler, useEffect, useRef } from 'react';
+import { Fragment, ReactElement, MouseEventHandler, useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { toPlainText } from '@portabletext/react';
 
@@ -33,6 +33,18 @@ const ProjectOverlay = (props: Props): ReactElement => {
     const modalRef = useRef<HTMLDivElement>(null);
     const onCloseRef = useRef(onClose);
     onCloseRef.current = onClose;
+    const [isClosing, setIsClosing] = useState(false);
+    const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    const handleClose = () => {
+        if (isClosing) return;
+        setIsClosing(true);
+        closeTimerRef.current = setTimeout(() => {
+            (onCloseRef.current as () => void)();
+        }, 300);
+    };
+    const handleCloseRef = useRef(handleClose);
+    handleCloseRef.current = handleClose;
 
     if (!backdropRoot || !modalRoot) {
         throw new Error('Required root elements not found');
@@ -45,7 +57,7 @@ const ProjectOverlay = (props: Props): ReactElement => {
 
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === 'Escape') {
-                (onCloseRef.current as unknown as () => void)();
+                handleCloseRef.current();
                 return;
             }
             if (e.key === 'Tab' && modalRef.current) {
@@ -75,6 +87,7 @@ const ProjectOverlay = (props: Props): ReactElement => {
             document.body.style.overflow = 'auto';
             document.body.style.paddingRight = '';
             document.removeEventListener('keydown', handleKeyDown);
+            if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
         };
     }, []);
 
@@ -82,14 +95,14 @@ const ProjectOverlay = (props: Props): ReactElement => {
         <Fragment>
             {ReactDOM.createPortal(
                 <div
-                    className="fixed top-0 left-0 w-full h-screen z-[100] bg-black/75 overflow-y-hidden animate-fade-in"
-                    onClick={onClose}
+                    className={`fixed top-0 left-0 w-full h-screen z-[100] bg-black/75 overflow-y-hidden ${isClosing ? 'animate-fade-out' : 'animate-fade-in'}`}
+                    onClick={handleClose}
                 />,
                 backdropRoot
             )}
             {ReactDOM.createPortal(
                 <div
-                    className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[60%] 3xl:w-[40%] z-[200] overflow-y-auto md:overflow-hidden max-h-screen md:max-h-none bg-bg-sec border border-bg-main pt-[1.5rem] px-[1.5rem] pb-[1.5rem] md:pt-[3rem] md:px-[3rem] md:pb-[8rem] animate-fade-in"
+                    className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[60%] 3xl:w-[40%] z-[200] overflow-y-auto md:overflow-hidden max-h-screen md:max-h-none bg-bg-sec border border-bg-main pt-[1.5rem] px-[1.5rem] pb-[1.5rem] md:pt-[3rem] md:px-[3rem] md:pb-[8rem] ${isClosing ? 'animate-fade-out' : 'animate-fade-in'}`}
                     ref={modalRef}
                     role='dialog'
                     aria-modal='true'
@@ -97,7 +110,7 @@ const ProjectOverlay = (props: Props): ReactElement => {
                 >
                     <button
                         className="text-text-main cursor-pointer absolute top-[1rem] right-[1rem] bg-transparent border-none text-[3rem] transition-all duration-500 hover:scale-[1.15] flex items-center justify-center leading-none w-[3rem] h-[3rem]"
-                        onClick={onClose}
+                        onClick={handleClose}
                     >
                         &times;
                     </button>
